@@ -136,30 +136,10 @@ export default function Support() {
                   <span>Account</span>
                   <b>{m.accountNumber}</b>
                 </div>
-                {m.referral && (
-                  <div className="field referral">
-                    <div>
-                      <span style={{ display: "block" }}>Referral code</span>
-                      <b>{m.referral.code}</b>
-                      <small>{m.referral.perk}</small>
-                    </div>
-                    <CopyButton
-                      value={m.referral.code}
-                      label={`${m.brand} referral code`}
-                    />
-                  </div>
-                )}
               </div>
             </div>
           ))}
         </div>
-
-        <p className="support-note reveal">
-          💡 Don&apos;t see the real QR codes yet? Save your three QR screenshots
-          into <code>public/qr/</code> as <code>gotyme.png</code>,{" "}
-          <code>maribank-julina.png</code>, and <code>maribank-john.png</code> —
-          they replace the placeholders automatically.
-        </p>
 
         <div className="support-links">
           {supportLinks.map((link) => {

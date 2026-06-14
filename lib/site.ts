@@ -111,11 +111,10 @@ export const supportMethods: SupportMethod[] = [
     accountNumber: "MariBank •••• 5833",
     network: "InstaPay",
     description:
-      "Scan with any InstaPay app to support via MariBank. New to MariBank? Sign up with the referral code below.",
+      "Scan with any InstaPay app to support via MariBank.",
     qrValue:
       "MariBank • Support LPG Go • Julina Marie Bibangco • InstaPay • https://mrheinrich.vercel.app",
     qrImage: "/qr/maribank-julina.png",
-    referral: { code: "JB360437", perk: "Get ₱150 when you sign up with this code" },
   },
   {
     id: "maribank-john",
@@ -125,7 +124,7 @@ export const supportMethods: SupportMethod[] = [
     accountNumber: "MariBank •••• 6493",
     network: "InstaPay",
     description:
-      "Scan with any InstaPay app to support via MariBank. New to MariBank? Sign up with the referral code below.",
+      "Scan with any InstaPay app to support via MariBank.",
     qrValue:
       "MariBank • Support LPG Go • John Heinrich Fabros • InstaPay • https://mrheinrich.vercel.app",
     qrImage: "/qr/maribank-john.png",
