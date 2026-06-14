@@ -575,9 +575,18 @@ header.scrolled .menu-toggle {
   color: var(--muted);
 }
 .qa.open .ans {
-  max-height: 320px;
+  max-height: 640px;
   opacity: 1;
   padding: 0 22px 22px;
+}
+.faq-foot {
+  text-align: center;
+  margin-top: 34px;
+}
+.faq-foot p {
+  color: var(--muted);
+  font-size: 15.5px;
+  margin-bottom: 14px;
 }
 
 /* ---------- LEGAL ---------- */
