@@ -26,11 +26,10 @@ export const developer = {
 
 // ---------------------------------------------------------------------------
 // App download — early-access APK + store availability.
-// Replace `apkUrl` with your real early-access APK link (e.g. a GitHub release,
-// Firebase App Distribution, or Google Drive direct-download link).
+// The APK is served from `public/downloads/lpg-go-android.apk`.
 // ---------------------------------------------------------------------------
 export const appDownload = {
-  apkUrl: "#", // ← TODO: put your early-access .apk download URL here
+  apkUrl: "/downloads/lpg-go-android.apk",
   stores: [
     { id: "play", name: "Google Play", caption: "Coming soon on" },
     { id: "ios", name: "App Store", caption: "Coming soon on" },
