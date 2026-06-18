@@ -1,4 +1,4 @@
-import { site, developer } from "@/lib/site";
+import { site, developer, social } from "@/lib/site";
 
 export default function Contact() {
   return (
@@ -102,6 +102,25 @@ export default function Contact() {
             <div>
               <h4>Support the project</h4>
               <p>Help keep LPG Go running — donate via GCash, Maya, or bank.</p>
+            </div>
+          </a>
+
+          <a
+            className="contact-card reveal d3"
+            href={social.facebook}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div className="ic facebook">
+              <svg className="svg" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+                <path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5.02 3.66 9.18 8.44 9.94v-7.03H7.9v-2.91h2.54V9.85c0-2.52 1.49-3.91 3.78-3.91 1.1 0 2.24.2 2.24.2v2.47h-1.26c-1.24 0-1.63.78-1.63 1.57v1.88h2.78l-.44 2.91h-2.34V22c4.78-.76 8.44-4.92 8.44-9.94z" />
+              </svg>
+            </div>
+            <div>
+              <h4>Facebook</h4>
+              <p>
+                Follow @lpggo.ph for updates, promos, and announcements.
+              </p>
             </div>
           </a>
         </div>

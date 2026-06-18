@@ -25,6 +25,26 @@ export const developer = {
 } as const;
 
 // ---------------------------------------------------------------------------
+// Social links — official LPG Go accounts. Surfaced in the footer + contact.
+// ---------------------------------------------------------------------------
+export const social = {
+  facebook: "https://www.facebook.com/lpggo.ph",
+} as const;
+
+// ---------------------------------------------------------------------------
+// App screenshots — App Store marketing shots shown in the "See it in action"
+// showcase. Images live in `public/screenshots/`.
+// ---------------------------------------------------------------------------
+export const screenshots = [
+  { src: "/screenshots/1.png", title: "Delivered to your door", caption: "On-demand LPG gas brought straight to your home." },
+  { src: "/screenshots/2.png", title: "Pick a nearby store", caption: "Choose an accredited dealer, brand, and tank size." },
+  { src: "/screenshots/3.png", title: "Track your rider", caption: "Follow your delivery live on the map in real time." },
+  { src: "/screenshots/4.png", title: "Scan to order", caption: "Scan a store's QR to order again in seconds." },
+  { src: "/screenshots/5.png", title: "Pay your way", caption: "Cash on delivery or secure online payment at checkout." },
+  { src: "/screenshots/6.png", title: "All your orders", caption: "Every order, status, and receipt in one place." },
+] as const;
+
+// ---------------------------------------------------------------------------
 // App download — early-access APK + store availability.
 // The APK is served from `public/downloads/lpg-go-android.apk`.
 // ---------------------------------------------------------------------------

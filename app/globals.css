@@ -434,6 +434,14 @@ header.scrolled .menu-toggle {
   background: var(--accent-soft);
   color: var(--accent);
 }
+.ic.facebook {
+  background: #e7f0ff;
+  color: #1877f2;
+}
+.ic.facebook .svg {
+  fill: currentColor;
+  stroke: none;
+}
 .card h3 {
   font-size: 19px;
   font-weight: 700;
@@ -941,11 +949,108 @@ header.scrolled .menu-toggle {
   color: var(--accent);
 }
 
+/* ---------- SCREENSHOTS / SHOWCASE ---------- */
+.shots {
+  background: var(--surface);
+}
+.shots-grid {
+  display: flex;
+  gap: 26px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding: 6px 4px 26px;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: var(--line) transparent;
+}
+.shots-grid::-webkit-scrollbar {
+  height: 8px;
+}
+.shots-grid::-webkit-scrollbar-thumb {
+  background: var(--line);
+  border-radius: 999px;
+}
+.shot {
+  flex: 0 0 auto;
+  width: min(74vw, 290px);
+  margin: 0;
+  scroll-snap-align: center;
+  text-align: center;
+}
+.shot-media {
+  border-radius: 26px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--line);
+  background: var(--soft);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+.shot:hover .shot-media {
+  transform: translateY(-6px);
+  box-shadow: 0 28px 60px rgba(30, 60, 114, 0.2);
+}
+.shot-media img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.shot figcaption {
+  margin-top: 18px;
+  padding: 0 6px;
+}
+.shot figcaption b {
+  display: block;
+  font-size: 16.5px;
+  font-weight: 700;
+  color: var(--ink);
+}
+.shot figcaption span {
+  display: block;
+  margin-top: 4px;
+  font-size: 14px;
+  color: var(--muted);
+}
+
 /* ---------- FOOTER ---------- */
 footer {
   background: var(--primary-dark);
   color: rgba(255, 255, 255, 0.78);
   padding: 56px 0 30px;
+}
+.socials {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 18px;
+}
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 999px;
+  padding: 9px 16px 9px 12px;
+  font-size: 14px;
+  font-weight: 600;
+  opacity: 1;
+  transition: background 0.25s ease, transform 0.25s ease, border-color 0.25s;
+}
+.social-link svg {
+  width: 20px;
+  height: 20px;
+  flex: 0 0 auto;
+  color: #1877f2;
+}
+.social-link:hover {
+  background: #1877f2;
+  border-color: #1877f2;
+  transform: translateY(-2px);
+  padding-left: 12px;
+  color: #fff;
+}
+.social-link:hover svg {
+  color: #fff;
 }
 .foot {
   display: grid;
