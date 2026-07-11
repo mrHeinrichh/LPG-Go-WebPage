@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 140" role="img" aria-label="Data privacy shield and phone">
+  <rect width="300" height="140" rx="18" fill="#eef2ff"/>
+  <path d="M82 24l50 18v28c0 30-20 48-50 58-30-10-50-28-50-58V42z" fill="#fff" stroke="#1e3c72" stroke-width="5" stroke-linejoin="round"/>
+  <path d="M62 74l14 14 30-34" fill="none" stroke="#2bae66" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="170" y="24" width="70" height="96" rx="14" fill="#fff" stroke="#2a5298" stroke-width="5"/>
+  <path d="M186 48h38M186 68h38M186 88h24" stroke="#2a5298" stroke-width="5" stroke-linecap="round"/>
+  <circle cx="242" cy="34" r="16" fill="#fdeee2"/>
+  <path d="M236 34h12M242 28v12" stroke="#e8772e" stroke-width="4" stroke-linecap="round"/>
+</svg>

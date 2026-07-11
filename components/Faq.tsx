@@ -49,7 +49,7 @@ const faqs: [string, string][] = [
   ],
   [
     "How do refunds work?",
-    "For eligible orders paid online, refunds are handled in coordination with the dealer and our payment partner — reach out via Support Feedback with your order details and we'll help sort it out. Cash on Delivery orders are simply not charged if they don't push through.",
+    "After a delivered order, eligible return/refund requests can be raised from the order detail page within the app's review window. Add the reason and evidence, then the dealer and admin team review the case. Resolved refunds show back in your order history. Cash on Delivery orders are simply not charged if they don't push through.",
   ],
   [
     "How do I become a dealer or rider?",

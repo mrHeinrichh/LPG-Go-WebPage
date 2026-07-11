@@ -11,6 +11,10 @@ export default function Terms() {
           <p>
             These Terms govern your use of the LPG Go app and services. By
             creating an account or placing an order, you agree to these Terms.
+            LPG Go operates in the Philippines and is designed to respect
+            consumer protection principles under Republic Act No. 7394, also
+            known as the Consumer Act of the Philippines. The full refund matrix
+            is available in the <a href="/policy/refund-policy">Refund Policy</a>.
           </p>
 
           <h3>1. The service</h3>
@@ -53,9 +57,21 @@ export default function Terms() {
           <h3>5. Cancellations &amp; refunds</h3>
           <p>
             You may cancel an order before a dealer accepts it. Once a rider is
-            dispatched, cancellation may not be possible. Refunds for eligible
-            online-paid orders are handled in coordination with the dealer and
-            our payment partner.
+            dispatched, cancellation may not be possible. Eligible return/refund
+            requests may be raised from the order detail page during the app's
+            review window and should include a clear reason and supporting
+            evidence. Refunds for eligible online-paid orders are handled in
+            coordination with the dealer, admin team, and payment partner. For
+            full refunds, the Kaliwaan Rule applies: the tank retrieval and
+            refund exchange happen simultaneously.
+          </p>
+
+          <h3>5.1 Implied warranty and off-app settlements</h3>
+          <p>
+            Defective products are handled according to applicable consumer
+            rights and implied warranty principles under RA 7394. Off-app refund
+            or exchange arrangements are not recognized; all settlements must be
+            processed and recorded through LPG Go.
           </p>
 
           <h3>6. Dealer &amp; rider obligations</h3>
@@ -81,7 +97,8 @@ export default function Terms() {
           <h3>9. Governing law</h3>
           <p>
             These Terms are governed by the laws of the Republic of the
-            Philippines.
+            Philippines, including applicable consumer protection and data
+            privacy laws.
           </p>
 
           <h3>10. Contact</h3>

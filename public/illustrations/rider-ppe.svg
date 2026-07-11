@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 140" role="img" aria-label="Rider PPE checklist">
+  <rect width="300" height="140" rx="18" fill="#eaf1fb"/>
+  <circle cx="88" cy="42" r="20" fill="#fff" stroke="#1e3c72" stroke-width="5"/>
+  <path d="M58 112c6-34 54-34 60 0" fill="#fff" stroke="#1e3c72" stroke-width="5"/>
+  <path d="M68 44h40M70 84h36" stroke="#e8772e" stroke-width="6" stroke-linecap="round"/>
+  <path d="M154 34h86M154 62h86M154 90h64" stroke="#2a5298" stroke-width="5" stroke-linecap="round"/>
+  <path d="M132 34l5 5 12-14M132 62l5 5 12-14M132 90l5 5 12-14" stroke="#2bae66" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

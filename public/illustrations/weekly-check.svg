@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 140" role="img" aria-label="Weekly LPG safety checks">
+  <rect width="300" height="140" rx="18" fill="#eaf1fb"/>
+  <g fill="#fff" stroke="#d3e0f3" stroke-width="4">
+    <rect x="24" y="30" width="54" height="72" rx="14"/>
+    <rect x="90" y="30" width="54" height="72" rx="14"/>
+    <rect x="156" y="30" width="54" height="72" rx="14"/>
+    <rect x="222" y="30" width="54" height="72" rx="14"/>
+  </g>
+  <path d="M44 67c14-20 22-20 14 0-5 13-19 13-14 0zM103 66h28M117 52v28M171 66c8-10 17-10 25 0M238 54h22v28h-22z" fill="none" stroke="#1e3c72" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M38 96l5 5 12-14M104 96l5 5 12-14M170 96l5 5 12-14M236 96l5 5 12-14" stroke="#2bae66" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

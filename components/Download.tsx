@@ -17,7 +17,7 @@ const storeIcon = (id: string) => {
 };
 
 export default function Download() {
-  const { apkUrl, stores } = appDownload;
+  const { apkUrl, apkSize, apkSha256, stores } = appDownload;
   const isFile = apkUrl.toLowerCase().endsWith(".apk");
 
   return (
@@ -44,10 +44,16 @@ export default function Download() {
               </svg>
               <span className="dl-apk-text">
                 <b>Get the APK now</b>
-                <small>Early access · Android build</small>
+                <small>Android APK · {apkSize}</small>
               </span>
             </a>
           </div>
+
+          <p className="apk-meta">
+            Direct download: <a href={apkUrl} download>lpg-go-android.apk</a>
+            <br />
+            SHA-256: <code>{apkSha256}</code>
+          </p>
 
           <div className="store-badges">
             {stores.map((s) => (

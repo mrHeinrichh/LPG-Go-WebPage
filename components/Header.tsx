@@ -19,7 +19,7 @@ export default function Header() {
   return (
     <header id="header" className={scrolled ? "scrolled" : ""}>
       <div className="wrap nav">
-        <a className="brand" href="#home" onClick={closeMenu}>
+        <a className="brand" href="/#home" onClick={closeMenu}>
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img src="/logo.png" alt="LPG Go" />
         </a>
@@ -29,14 +29,14 @@ export default function Header() {
               {link.label}
             </a>
           ))}
-          <a href="#privacy" onClick={closeMenu}>
+          <a href="/#privacy" onClick={closeMenu}>
             Privacy
           </a>
-          <a href="#terms" onClick={closeMenu}>
+          <a href="/#terms" onClick={closeMenu}>
             Terms
           </a>
         </nav>
-        <a className="btn app-cta" href="#download" onClick={closeMenu}>
+        <a className="btn app-cta" href="/#download" onClick={closeMenu}>
           Get the App
         </a>
         <button

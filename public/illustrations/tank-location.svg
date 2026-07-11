@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 140" role="img" aria-label="Safe LPG tank location in a ventilated kitchen">
+  <rect width="300" height="140" rx="18" fill="#eaf1fb"/>
+  <rect x="18" y="24" width="108" height="92" rx="10" fill="#fff" stroke="#d3e0f3" stroke-width="4"/>
+  <path d="M36 104V72h28v32M78 104V52h30v52" fill="none" stroke="#1e3c72" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M156 102V70c0-15 12-27 27-27s27 12 27 27v32" fill="#fff" stroke="#1e3c72" stroke-width="5"/>
+  <path d="M172 43v-12h22v12" fill="none" stroke="#1e3c72" stroke-width="5" stroke-linecap="round"/>
+  <path d="M226 52h42M226 72h42M226 92h42" stroke="#2a5298" stroke-width="5" stroke-linecap="round"/>
+  <path d="M143 58c-14-9-28-9-42 0M143 80c-14-9-28-9-42 0" stroke="#2bae66" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="224" cy="104" r="14" fill="#fdeee2"/>
+  <path d="M217 104l5 5 10-13" fill="none" stroke="#e8772e" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

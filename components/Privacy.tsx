@@ -12,7 +12,8 @@ export default function Privacy() {
             LPG Go (&quot;we&quot;, &quot;our&quot;, &quot;the app&quot;)
             respects your privacy. This policy explains what we collect, why we
             collect it, and the choices you have. By using LPG Go you agree to
-            the practices described here.
+            the practices described here. This policy is written with the Data
+            Privacy Act of 2012, Republic Act No. 10173, in mind.
           </p>
 
           <h3>1. Information we collect</h3>
@@ -77,10 +78,17 @@ export default function Privacy() {
 
           <h3>6. Your rights</h3>
           <p>
-            You may access, update, or request deletion of your account
-            information, and you can disable location permissions at any time in
-            your device settings. To make a request, contact us using the details
-            in the Contact section.
+            The Data Privacy section of the <a href="/kaligtasan">Safety Manual</a>
+            explains how operational and complaint data is protected. Under RA
+            10173, you have the right to know, obtain a copy, correct, delete or
+            block, object to marketing use, and file a complaint with the
+            National Privacy Commission.
+          </p>
+          <p>
+            For privacy requests, contact the Data Protection Officer at{" "}
+            <a href="mailto:dpo@lpggo.ph">dpo@lpggo.ph</a>. If you believe your
+            rights were not respected, you may file a complaint with the
+            National Privacy Commission through its official channels.
           </p>
 
           <h3>7. Changes to this policy</h3>

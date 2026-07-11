@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 140" role="img" aria-label="Home emergency kit">
+  <rect width="300" height="140" rx="18" fill="#f8f9fb"/>
+  <rect x="28" y="56" width="46" height="62" rx="12" fill="#fff" stroke="#f44336" stroke-width="5"/>
+  <path d="M40 56V42h22v14M43 84h16M51 76v16" stroke="#f44336" stroke-width="4" stroke-linecap="round"/>
+  <path d="M104 70h66v28h-66zM170 77h24v14h-24" fill="#eaf1fb" stroke="#1e3c72" stroke-width="5" stroke-linejoin="round"/>
+  <rect x="214" y="48" width="44" height="70" rx="10" fill="#fff7ed" stroke="#e8772e" stroke-width="5"/>
+  <path d="M224 70h24M224 88h24" stroke="#e8772e" stroke-width="4" stroke-linecap="round"/>
+  <path d="M105 48h72M105 118h154" stroke="#2bae66" stroke-width="4" stroke-linecap="round"/>
+</svg>

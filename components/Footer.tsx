@@ -43,30 +43,34 @@ export default function Footer() {
           </div>
           <div>
             <h5>Explore</h5>
-            <a href="#how">How it works</a>
-            <a href="#features">Features</a>
-            <a href="#faq">FAQ</a>
-            <a href="#contact">Contact us</a>
+            <a href="/#how">How it works</a>
+            <a href="/#features">Features</a>
+            <a href="/#faq">FAQ</a>
+            <a href="/#contact">Contact us</a>
           </div>
           <div>
-            <h5>Support</h5>
-            <a href="#support">Support the project</a>
+            <h5>Safety</h5>
+            <a href="/kaligtasan">Safety Manual</a>
+            <a href="/kaligtasan/emergency">Emergency Procedure</a>
+            <a href="/#contact">Report a Safety Issue</a>
+            <a href="/#support">Support the project</a>
             <a href={`mailto:${site.email}`}>Email support</a>
-            <a href={developer.website} target="_blank" rel="noopener noreferrer">
-              Developer portfolio
-            </a>
           </div>
           <div>
             <h5>Legal</h5>
-            <a href="#privacy">Privacy Policy</a>
-            <a href="#terms">Terms &amp; Conditions</a>
+            <a href="/policy/refund-policy">Refund Policy</a>
+            <a href="/consumer-rights">Consumer Rights</a>
+            <a href="/about/compliance">Compliance</a>
+            <a href="/#terms">Terms &amp; Conditions</a>
+            <a href="/#privacy">Privacy Policy</a>
           </div>
         </div>
         <div className="copy">
           <span>
-            © {year} {site.name}. All rights reserved.
+            © {year} {site.name} PH. Trademark App. No. 4/2026/00501327 filed
+            with IPOPHIL.
           </span>
-          <span>Proudly made by the Philippines 🇵🇭</span>
+          <span>Compliant with RA 11592, RA 7394, and RA 10173.</span>
         </div>
       </div>
     </footer>

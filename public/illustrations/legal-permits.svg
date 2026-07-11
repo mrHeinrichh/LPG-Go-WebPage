@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 140" role="img" aria-label="Legal permit cards">
+  <rect width="300" height="140" rx="18" fill="#eef2ff"/>
+  <g fill="#fff" stroke="#1e3c72" stroke-width="4">
+    <rect x="30" y="30" width="68" height="80" rx="10"/>
+    <rect x="116" y="30" width="68" height="80" rx="10"/>
+    <rect x="202" y="30" width="68" height="80" rx="10"/>
+  </g>
+  <path d="M46 54h36M46 72h28M132 54h36M132 72h28M218 54h36M218 72h28" stroke="#2a5298" stroke-width="4" stroke-linecap="round"/>
+  <path d="M50 96l7 7 17-22M136 96l7 7 17-22M222 96l7 7 17-22" stroke="#2bae66" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

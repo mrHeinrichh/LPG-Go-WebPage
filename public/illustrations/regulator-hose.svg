@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 140" role="img" aria-label="Regulator and hose bubble test">
+  <rect width="300" height="140" rx="18" fill="#fff7ed"/>
+  <rect x="34" y="48" width="64" height="64" rx="18" fill="#fff" stroke="#1e3c72" stroke-width="5"/>
+  <path d="M50 48V34h32v14M98 82h58" stroke="#1e3c72" stroke-width="5" stroke-linecap="round"/>
+  <rect x="154" y="60" width="54" height="44" rx="12" fill="#fff" stroke="#e8772e" stroke-width="5"/>
+  <path d="M208 82c24 0 26-24 50-24" fill="none" stroke="#2a5298" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="216" cy="52" r="7" fill="#dff7ec" stroke="#2bae66" stroke-width="3"/>
+  <circle cx="236" cy="42" r="5" fill="#dff7ec" stroke="#2bae66" stroke-width="3"/>
+  <circle cx="254" cy="54" r="6" fill="#dff7ec" stroke="#2bae66" stroke-width="3"/>
+  <path d="M164 82h34" stroke="#e8772e" stroke-width="4" stroke-linecap="round"/>
+</svg>

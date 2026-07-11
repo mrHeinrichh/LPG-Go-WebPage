@@ -4,15 +4,16 @@ export default function Hero() {
       <div className="wrap">
         <div className="reveal in">
           <span className="pill">
-            <span className="dot" /> Cooking gas, delivered fast
+            <span className="dot" /> LPG Go PH marketplace
           </span>
           <h1>
-            Your next <span className="hl">LPG refill</span> is just a tap away.
+            LPG Go brings <span className="hl">safe LPG delivery</span> to your phone.
           </h1>
           <p className="sub">
             LPG Go connects Filipino households with verified local gas dealers
             for fast, trackable cooking-gas delivery — order a refill or a new
-            tank, pay cash or online, and follow your rider in real time.
+            tank, pay cash or online, follow your rider in real time, and raise
+            support or refund concerns from the order screen.
           </p>
           <div className="hero-cta">
             <a className="btn" href="#how">

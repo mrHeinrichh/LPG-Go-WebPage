@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 140" role="img" aria-label="Dealer storage layout with zones">
+  <rect width="300" height="140" rx="18" fill="#f8f9fb"/>
+  <rect x="24" y="28" width="252" height="84" rx="12" fill="#fff" stroke="#d3e0f3" stroke-width="4"/>
+  <path d="M108 28v84M192 28v84" stroke="#d3e0f3" stroke-width="4"/>
+  <g fill="#eaf1fb" stroke="#1e3c72" stroke-width="4">
+    <path d="M44 92V62c0-10 8-18 18-18s18 8 18 18v30z"/>
+    <path d="M128 92V62c0-10 8-18 18-18s18 8 18 18v30z"/>
+  </g>
+  <path d="M216 50l38 38M254 50l-38 38" stroke="#f44336" stroke-width="6" stroke-linecap="round"/>
+  <path d="M42 122h40M126 122h42M214 122h44" stroke="#2bae66" stroke-width="4" stroke-linecap="round"/>
+</svg>

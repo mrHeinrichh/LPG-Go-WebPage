@@ -50,6 +50,9 @@ export const screenshots = [
 // ---------------------------------------------------------------------------
 export const appDownload = {
   apkUrl: "/downloads/lpg-go-android.apk",
+  apkSize: "90.0 MB",
+  apkSha256:
+    "12ab28e1a14660f141e31f410a30c6eeb1e07cc87b81bfb6b1375ee66bce902e",
   stores: [
     { id: "play", name: "Google Play", caption: "Coming soon on" },
     { id: "ios", name: "App Store", caption: "Coming soon on" },
@@ -152,9 +155,38 @@ export const supportMethods: SupportMethod[] = [
 ];
 
 export const navLinks = [
-  { href: "#how", label: "How it works" },
-  { href: "#features", label: "Features" },
-  { href: "#faq", label: "FAQ" },
-  { href: "#support", label: "Support" },
-  { href: "#contact", label: "Contact" },
+  { href: "/#how", label: "How it works" },
+  { href: "/kaligtasan", label: "Safety" },
+  { href: "/#features", label: "Features" },
+  { href: "/#partners", label: "Dealers & Riders" },
+  { href: "/policy/refund-policy", label: "Policies" },
+  { href: "/#faq", label: "FAQ" },
 ];
+
+export const coverageAreas = [
+  "Nearby verified dealers",
+  "Metro Manila-ready",
+  "Province expansion",
+  "Dealer-led delivery zones",
+] as const;
+
+export const testimonials = [
+  {
+    name: "Customer household",
+    role: "Home cooking refill",
+    quote:
+      "Hindi na hulaan kung nasaan na ang rider. Kita sa app ang status, store, presyo, at delivery updates.",
+  },
+  {
+    name: "Local dealer",
+    role: "Accredited LPG seller",
+    quote:
+      "Mas madaling i-manage ang orders, riders, products, vouchers, at wallet transactions in one dashboard.",
+  },
+  {
+    name: "Delivery rider",
+    role: "Dealer rider",
+    quote:
+      "Clear ang pickup, drop-off, proof photo, at customer contact flow kaya mas maayos ang delivery.",
+  },
+] as const;

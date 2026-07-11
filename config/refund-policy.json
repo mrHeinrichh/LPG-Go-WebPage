@@ -1,0 +1,268 @@
+{
+  "config_name": "lpggo_return_refund_policy",
+  "version": "1.0.0",
+  "currency": "PHP",
+  "dispute_windows": {
+    "standard_hours": 24,
+    "auto_confirm_delivery_hours": 12,
+    "extended": {
+      "LEAKING": { "hours": 168, "label": "7 days - safety defect" },
+      "UNDERFILLED": { "hours": 48, "label": "48 hours - weight verification" }
+    }
+  },
+  "transaction_fee": {
+    "amount": 2.00,
+    "charged_on": "TRANSACTION_COMPLETE",
+    "reversed_on_full_refund": true,
+    "charged_on_partial_refund": true
+  },
+  "complaint_reasons": [
+    {
+      "code": "WRONG_ITEM",
+      "label_en": "Wrong brand or size delivered",
+      "label_tl": "Maling brand o size ang dumating",
+      "category": "PRODUCT",
+      "fault_party": "DEALER",
+      "claim_window_hours": 24,
+      "evidence_required": true,
+      "evidence_types": ["photo"],
+      "allowed_resolutions": ["REPLACEMENT", "FULL_REFUND"],
+      "default_resolution": "REPLACEMENT",
+      "tank_retrieval_required": true,
+      "safety_priority": false
+    },
+    {
+      "code": "UNDERFILLED",
+      "label_en": "Cylinder feels underfilled or short weight",
+      "label_tl": "Kulang ang laman ng tangke",
+      "category": "PRODUCT",
+      "fault_party": "DEALER",
+      "claim_window_hours": 48,
+      "evidence_required": true,
+      "evidence_types": ["photo", "video"],
+      "allowed_resolutions": ["PARTIAL_REFUND", "REPLACEMENT"],
+      "default_resolution": "PARTIAL_REFUND",
+      "tank_retrieval_required": false,
+      "safety_priority": false
+    },
+    {
+      "code": "LEAKING",
+      "label_en": "Leaking valve or gas smell",
+      "label_tl": "May tagas o amoy gas",
+      "category": "PRODUCT",
+      "fault_party": "DEALER",
+      "claim_window_hours": 168,
+      "evidence_required": true,
+      "evidence_types": ["photo", "video"],
+      "allowed_resolutions": ["REPLACEMENT", "FULL_REFUND"],
+      "default_resolution": "REPLACEMENT",
+      "tank_retrieval_required": true,
+      "safety_priority": true,
+      "show_safety_advisory": true,
+      "safety_advisory_en": "Close the valve, move away from any flame, and bring the tank to a well-ventilated area.",
+      "safety_advisory_tl": "Isara ang valve, ilayo sa apoy, at ilabas sa maaliwalas na lugar."
+    },
+    {
+      "code": "DAMAGED_CYLINDER",
+      "label_en": "Damaged, rusty, or dented cylinder",
+      "label_tl": "Sira, kalawangin, o yupi ang tangke",
+      "category": "PRODUCT",
+      "fault_party": "DEALER",
+      "claim_window_hours": 24,
+      "evidence_required": true,
+      "evidence_types": ["photo"],
+      "allowed_resolutions": ["REPLACEMENT", "FULL_REFUND"],
+      "default_resolution": "REPLACEMENT",
+      "tank_retrieval_required": true,
+      "safety_priority": false
+    },
+    {
+      "code": "BROKEN_SEAL",
+      "label_en": "Broken or missing safety seal",
+      "label_tl": "Sira o walang safety seal",
+      "category": "PRODUCT",
+      "fault_party": "DEALER",
+      "claim_window_hours": 24,
+      "evidence_required": true,
+      "evidence_types": ["photo"],
+      "allowed_resolutions": ["REPLACEMENT", "FULL_REFUND"],
+      "default_resolution": "REPLACEMENT",
+      "tank_retrieval_required": true,
+      "safety_priority": true
+    },
+    {
+      "code": "EXPIRED_TANK",
+      "label_en": "Expired requalification date",
+      "label_tl": "Expired na ang tangke",
+      "category": "PRODUCT",
+      "fault_party": "DEALER",
+      "claim_window_hours": 24,
+      "evidence_required": true,
+      "evidence_types": ["photo"],
+      "allowed_resolutions": ["REPLACEMENT", "FULL_REFUND"],
+      "default_resolution": "REPLACEMENT",
+      "tank_retrieval_required": true,
+      "safety_priority": true
+    },
+    {
+      "code": "INCOMPLETE_ORDER",
+      "label_en": "Missing items - hose, regulator, etc.",
+      "label_tl": "Kulang ang order",
+      "category": "PRODUCT",
+      "fault_party": "DEALER",
+      "claim_window_hours": 24,
+      "evidence_required": false,
+      "allowed_resolutions": ["REDELIVER_MISSING", "PARTIAL_REFUND"],
+      "default_resolution": "REDELIVER_MISSING",
+      "tank_retrieval_required": false,
+      "safety_priority": false
+    },
+    {
+      "code": "NOT_DELIVERED",
+      "label_en": "Order never arrived",
+      "label_tl": "Hindi dumating ang order",
+      "category": "DELIVERY",
+      "fault_party": "DEALER",
+      "claim_window_hours": null,
+      "evidence_required": false,
+      "allowed_resolutions": ["REDELIVER", "FULL_REFUND"],
+      "default_resolution": "FULL_REFUND",
+      "applies_to_payment": ["ONLINE"]
+    },
+    {
+      "code": "LATE_DELIVERY",
+      "label_en": "Delivered past promised time",
+      "label_tl": "Sobrang tagal ng delivery",
+      "category": "DELIVERY",
+      "fault_party": "DEALER",
+      "claim_window_hours": 24,
+      "allowed_resolutions": ["ACKNOWLEDGE_STRIKE", "GOODWILL_VOUCHER"],
+      "default_resolution": "ACKNOWLEDGE_STRIKE"
+    },
+    {
+      "code": "RIDER_ISSUE",
+      "label_en": "Rider behavior or mishandling",
+      "label_tl": "Problema sa rider",
+      "category": "DELIVERY",
+      "fault_party": "DEALER",
+      "claim_window_hours": 24,
+      "allowed_resolutions": ["ACKNOWLEDGE_STRIKE", "ESCALATE_REVIEW"],
+      "default_resolution": "ESCALATE_REVIEW"
+    },
+    {
+      "code": "OVERCHARGED",
+      "label_en": "Charged more than app price",
+      "label_tl": "Sobra ang siningil",
+      "category": "DELIVERY",
+      "fault_party": "DEALER",
+      "claim_window_hours": 48,
+      "evidence_required": true,
+      "allowed_resolutions": ["PARTIAL_REFUND"],
+      "default_resolution": "PARTIAL_REFUND",
+      "applies_to_payment": ["COD"]
+    },
+    {
+      "code": "CHANGED_MIND",
+      "label_en": "Changed mind or ordered by mistake",
+      "label_tl": "Nagbago ang isip",
+      "category": "CUSTOMER",
+      "fault_party": "CUSTOMER",
+      "claim_window_hours": 0,
+      "allowed_resolutions": ["DENIED_NOT_COVERED", "DEALER_GOODWILL_OPTIONAL"],
+      "default_resolution": "DENIED_NOT_COVERED"
+    },
+    {
+      "code": "OTHER",
+      "label_en": "Other - please describe",
+      "label_tl": "Iba pa",
+      "category": "OTHER",
+      "fault_party": "PENDING_REVIEW",
+      "claim_window_hours": 24,
+      "evidence_required": true,
+      "evidence_types": ["photo", "text_description"],
+      "allowed_resolutions": ["MANUAL_REVIEW"],
+      "default_resolution": "MANUAL_REVIEW"
+    }
+  ],
+  "cancellation_rules": {
+    "before_dispatch": { "allowed": true, "refund_type": "FULL", "fee": 0 },
+    "in_transit": {
+      "allowed": true,
+      "refund_type": "FULL_MINUS_DELIVERY_FEE",
+      "cod_repeat_offense_threshold": 3,
+      "cod_repeat_offense_window_days": 30,
+      "cod_repeat_offense_action": "DISABLE_COD_FOR_CUSTOMER"
+    },
+    "after_delivery_paid": {
+      "allowed": false,
+      "exception": "DEALER_GOODWILL_OPTIONAL"
+    }
+  },
+  "resolution_ladder": [
+    { "order": 1, "code": "REPLACEMENT", "sla_hours": 24, "money_movement": false, "tank_swap": true },
+    { "order": 2, "code": "PARTIAL_REFUND", "money_movement": true },
+    { "order": 3, "code": "FULL_REFUND", "money_movement": true, "tank_retrieval_required": true, "kaliwaan_rule": true }
+  ],
+  "refund_funding_matrix": [
+    { "payment_method": "ONLINE", "escrow_state": "PENDING", "funding_source": "PENDING_BALANCE" },
+    { "payment_method": "ONLINE", "escrow_state": "RELEASED", "funding_source": "DEALER_WALLET_AVAILABLE", "fallback": "FUTURE_PAYOUT_DEDUCTION" },
+    { "payment_method": "COD", "funding_source": "DEALER_CASH_ON_PICKUP", "fallback": "DEALER_WALLET_DEDUCTION" },
+    { "payment_method": "ANY", "escrow_state": "DEALER_FUNDS_EXHAUSTED", "funding_source": "PLATFORM_GOODWILL", "cap_amount": 2000, "requires_approval": "OPS_LEAD" }
+  ],
+  "refund_destinations": [
+    { "code": "ORIGINAL_METHOD", "label_en": "Original payment method (GCash)", "processing_days_min": 3, "processing_days_max": 5, "is_default": true },
+    { "code": "PLATFORM_WALLET", "label_en": "LPG Go Wallet (instant)", "processing_days_min": 0, "processing_days_max": 0 }
+  ],
+  "cash_refund_dual_confirmation": {
+    "enabled": true,
+    "dealer_action": "MARK_REFUND_ISSUED",
+    "customer_action": "CONFIRM_RECEIVED",
+    "confirmation_methods": ["IN_APP_TAP", "QR_SCAN"],
+    "customer_confirmation_timeout_hours": 24,
+    "on_timeout_fallback": "DEALER_WALLET_DEDUCTION"
+  },
+  "adjusted_collection": {
+    "enabled": true,
+    "applies_to_payment": ["COD"],
+    "trigger_point": "AT_DOORSTEP_BEFORE_PAYMENT",
+    "requires_dealer_approval": true
+  },
+  "dealer_wallet": {
+    "balances": ["AVAILABLE", "PENDING"],
+    "cod_minimum_balance": 300,
+    "cod_exposure_cap_multiplier": 5,
+    "negative_balance_action": "RESTRICT_NEW_ORDERS",
+    "negative_balance_topup_deadline_hours": 48,
+    "ledger_entry_types": ["TOPUP", "ONLINE_PAYMENT_IN", "RELEASE", "TXN_FEE", "FEE_REVERSAL", "REFUND_DEDUCT", "CASH_REFUND_CONFIRMED", "PAYOUT_DEDUCTION", "WITHDRAWAL", "ADJUSTMENT_ADMIN"]
+  },
+  "sla_targets_hours": {
+    "ticket_first_response": 4,
+    "safety_ticket_first_response": 1,
+    "complaint_validation_from_complete_evidence": 24,
+    "replacement_delivery": 24,
+    "cash_on_pickup_trip": 24,
+    "gcash_refund_send": 24,
+    "wallet_refund_credit": 0,
+    "contested_dispute_resolution": 72
+  },
+  "fraud_guards": {
+    "customer": {
+      "max_claims_per_30_days": 3,
+      "escalation_path": ["REVIEW", "EVIDENCE_BAR_RAISED", "COD_DISABLED", "BAN"]
+    },
+    "dealer": {
+      "max_validated_faults_per_30_days": 3,
+      "safety_violation_immediate_review": true,
+      "escalation_path": ["VISIBILITY_REDUCED", "EXTENDED_HOLDS", "SUSPENSION", "TERMINATION"]
+    },
+    "off_app_settlement_recognized": false
+  },
+  "retrieval_rules": {
+    "kaliwaan_rule": true,
+    "refund_release_gated_on_retrieval": true,
+    "max_contact_attempts": 3,
+    "contact_attempt_window_days": 7,
+    "on_unreachable_customer": "CLOSE_CLAIM_NO_REFUND",
+    "retrieved_safety_tank_redeploy": false
+  }
+}

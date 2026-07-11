@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 140" role="img" aria-label="Correct flame first ignition sequence">
+  <rect width="300" height="140" rx="18" fill="#f8f9fb"/>
+  <rect x="20" y="24" width="120" height="92" rx="14" fill="#eaf1fb" stroke="#2bae66" stroke-width="4"/>
+  <rect x="160" y="24" width="120" height="92" rx="14" fill="#fff1f2" stroke="#f44336" stroke-width="4"/>
+  <path d="M48 90h62M64 90c0-22 32-22 32 0" fill="none" stroke="#1e3c72" stroke-width="5" stroke-linecap="round"/>
+  <path d="M78 42c16 18-10 22 6 40 17-12 20-27-6-40z" fill="#e8772e"/>
+  <path d="M188 90h62M204 90c0-22 32-22 32 0" fill="none" stroke="#1e3c72" stroke-width="5" stroke-linecap="round"/>
+  <path d="M210 50c18 24 0 30 24 40 24-26 6-48-24-40z" fill="#f44336"/>
+  <path d="M48 38l10 10 22-24M190 34l36 36M226 34l-36 36" fill="none" stroke="#2bae66" stroke-width="5" stroke-linecap="round"/>
+  <path d="M190 34l36 36M226 34l-36 36" stroke="#f44336" stroke-width="5" stroke-linecap="round"/>
+</svg>
