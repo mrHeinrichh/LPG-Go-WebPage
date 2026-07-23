@@ -10,10 +10,10 @@ export default function Hero() {
             LPG Go brings <span className="hl">safe LPG delivery</span> to your phone.
           </h1>
           <p className="sub">
-            LPG Go connects Filipino households with verified local gas dealers
-            for fast, trackable cooking-gas delivery — order a refill or a new
-            tank, pay cash or online, follow your rider in real time, and raise
-            support or refund concerns from the order screen.
+            LPG Go helps Filipino households order cooking gas from verified
+            local dealers. Get a refill or a new tank, pay by cash or online,
+            track your rider in real time, and manage support or refund concerns
+            from the order screen.
           </p>
           <div className="hero-cta">
             <a className="btn" href="#how">

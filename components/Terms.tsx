@@ -19,9 +19,11 @@ export default function Terms() {
 
           <h3>1. The service</h3>
           <p>
-            LPG Go is a marketplace that connects customers with independent LPG
-            dealers and riders. We facilitate orders, delivery coordination, and
-            payments; the gas products are sold and fulfilled by the dealers.
+            LPG Go is a marketplace platform that connects customers with
+            independent LPG dealers, retailers, and delivery riders. LPG Go
+            facilitates orders, delivery coordination, and payments, while LPG
+            products are sold and fulfilled by participating dealers and
+            retailers.
           </p>
 
           <h3>2. Accounts</h3>
