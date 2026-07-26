@@ -15,8 +15,8 @@ const features: Feature[] = [
         <circle cx="12" cy="10" r="2.5" />
       </svg>
     ),
-    title: "Nearby dealer discovery",
-    body: "Find accredited stores around you on a live map, with distance and open/closed status.",
+    title: "Nearby store discovery",
+    body: "Find participating dealers/retailers around you, with distance and operating status.",
   },
   {
     icon: (
@@ -28,7 +28,7 @@ const features: Feature[] = [
     ),
     orange: true,
     title: "Real-time rider tracking",
-    body: "Follow your delivery on the map the whole way — the rider stays traceable even between app screens.",
+    body: "Follow available rider location and order status updates from pickup through delivery.",
   },
   {
     icon: (
@@ -37,8 +37,8 @@ const features: Feature[] = [
         <path d="M3 10h18" />
       </svg>
     ),
-    title: "Cash or QR Ph online",
-    body: "Pay the rider on delivery, or settle instantly online with secure QR Ph payments.",
+    title: "Flexible payments",
+    body: "Pay by Cash on Delivery, with supported online payment options shown when available.",
   },
   {
     icon: (
@@ -47,8 +47,8 @@ const features: Feature[] = [
         <circle cx="12" cy="12" r="9" />
       </svg>
     ),
-    title: "Verified dealers",
-    body: "Every store is reviewed by our team and must submit valid permits and licenses before going live.",
+    title: "Reviewed dealers/retailers",
+    body: "Participating stores submit required business and LPG documents for LPG Go onboarding review.",
   },
   {
     icon: (
@@ -82,27 +82,27 @@ const check = (
 const audiences = [
   {
     cls: "b",
-    title: "🏠 Customers",
+    title: "Customers",
     lead: "Order gas without the guesswork.",
     items: [
-      "Guided brand → size → order type",
+      "Guided brand, size, and order type",
       "Live tracking & order timeline",
-      "COD or online payment",
+      "COD or supported online payment",
     ],
   },
   {
     cls: "o",
-    title: "🛒 Dealers",
+    title: "Dealers/Retailers",
     lead: "Run your store from your phone.",
     items: [
       "Product catalog & walk-in POS",
       "Manage riders & orders",
-      "Wallet, payouts & vouchers",
+      "Store Service Credit (SCC), payouts, and vouchers",
     ],
   },
   {
     cls: "d",
-    title: "🛵 Riders",
+    title: "Riders",
     lead: "Deliver with confidence.",
     items: [
       "Clear pickup & drop-off flow",
@@ -120,8 +120,8 @@ export default function Features() {
           <span className="eyebrow reveal">Features</span>
           <h2 className="title reveal d1">Everything you need in one tap</h2>
           <p className="lead reveal d2">
-            Thoughtful tools for customers, dealers, and riders — designed to
-            make every order safe, fair, and fast.
+            Practical tools for customers, dealers/retailers, and riders,
+            designed to support clear and accountable LPG orders.
           </p>
         </div>
         <div className="grid g3">

@@ -4,7 +4,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
-  title: `${site.name} — ${site.tagline}`,
+  title: `${site.name} - ${site.tagline}`,
   description: site.description,
   applicationName: site.name,
   authors: [{ name: "mrheinrichhh", url: "https://mrheinrich.vercel.app" }],
@@ -26,13 +26,13 @@ export const metadata: Metadata = {
     locale: site.locale,
     url: site.url,
     siteName: site.name,
-    title: `${site.name} — ${site.tagline}`,
+    title: `${site.name} - ${site.tagline}`,
     description: site.description,
     images: [{ url: "/logo.png", width: 512, height: 512, alt: site.name }],
   },
   twitter: {
     card: "summary_large_image",
-    title: `${site.name} — ${site.tagline}`,
+    title: `${site.name} - ${site.tagline}`,
     description: site.description,
     images: ["/logo.png"],
   },

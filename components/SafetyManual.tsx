@@ -22,7 +22,7 @@ const emergency = [
   "Turn off the regulator if safe to reach.",
   "Open doors and windows for ventilation.",
   "Move people away from the area.",
-  "Call your dealer, building admin, or emergency responders.",
+  "Call your dealer/retailer, building administrator, or emergency responders.",
 ];
 
 export default function SafetyManual() {
@@ -34,7 +34,7 @@ export default function SafetyManual() {
           <h2 className="title reveal d1">Safety-first LPG delivery</h2>
           <p className="lead reveal d2">
             LPG Go keeps safety visible before, during, and after delivery:
-            verified dealers, trackable riders, photo-confirmed handoff, and
+            reviewed dealers/retailers, trackable riders, delivery evidence, and
             practical reminders for every household.
           </p>
         </div>

@@ -18,7 +18,7 @@ function CopyButton({ value, label }: { value: string; label: string }) {
       setCopied(true);
       setTimeout(() => setCopied(false), 1600);
     } catch {
-      /* clipboard unavailable — ignore */
+      /* Clipboard unavailable; leave the account details visible. */
     }
   };
 
@@ -82,7 +82,7 @@ function MethodQr({ method }: { method: SupportMethod }) {
     <img
       ref={imgRef}
       src={method.qrImage}
-      alt={`${method.brand} — ${method.accountName} QR code`}
+      alt={`${method.brand} - ${method.accountName} QR code`}
       onError={() => setFailed(true)}
     />
   );
@@ -94,12 +94,12 @@ export default function Support() {
       <div className="wrap">
         <div className="center" style={{ marginBottom: 44 }}>
           <span className="eyebrow reveal">Support the project</span>
-          <h2 className="title reveal d1">Buy us a tank of gas ⛽</h2>
+          <h2 className="title reveal d1">Support LPG Go</h2>
           <p className="lead reveal d2">
             LPG Go is independently built and maintained by{" "}
             <strong>{developer.name}</strong>. If the app saved you a trip or a
             phone call, you can help cover hosting, map, and payment-gateway
-            costs by scanning any of the QR codes below — every bit keeps the
+            costs by scanning any of the QR codes below. Every contribution keeps the
             marketplace running and free for households.
           </p>
         </div>

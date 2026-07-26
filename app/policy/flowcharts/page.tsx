@@ -4,78 +4,85 @@ import PolicyLayout from "@/components/PolicyLayout";
 
 export const metadata: Metadata = {
   title: "Policy Flowcharts | LPG Go PH",
-  description: "Visual LPG Go PH refund and complaint policy flowcharts.",
+  description:
+    "Visual LPG Go PH return, replacement, refund, fee, and dispute flows.",
 };
 
 const flowcharts = [
   {
-    title: "Online Payment Wallet and Escrow Flow",
-    caption: "Shows how online payments enter Pending Balance, release, or remain held during dispute review.",
+    title: "Store Service Credit Fee Lifecycle",
+    caption:
+      "Shows how a configurable dealer/retailer transaction fee is held, finalized, or reversed.",
     chart: `flowchart TD
-  A[Customer pays via admin's GCash QR] --> B[Dealer wallet: PENDING - held]
-  B --> C[Delivery + 24-hour dispute window]
-  C -->|No complaint| D[Pending to Available less ₱2 fee]
-  C -->|Complaint filed| E[Hold extended during dispute]
-  D --> F[Available balance - withdrawable]
-  E --> G[Refund if valid - admin sends GCash]
-  G --> H[Pending balance reduced]`,
+  A[Order marked Delivered] --> B[Configurable fee held from SCC]
+  B --> C{Eligible return and full refund before finalization?}
+  C -->|Yes| D[Reverse fee hold to store SCC]
+  C -->|No| E[Order marked Completed]
+  E --> F[Wait through one-hour replacement window]
+  F --> G{Return or replacement opened?}
+  G -->|Yes| H[Preserve hold during review]
+  G -->|No| I[Finalize dealer or retailer transaction fee]`,
   },
   {
-    title: "COD Refund Flow",
-    caption: "Explains how COD complaints resolve through wallet deduction or cash refund with dual confirmation.",
+    title: "Customer Return Actions",
+    caption:
+      "Maps the 30-minute Return and Full Refund action, one-hour Return and Replace action, and Report or Dispute fallback.",
     chart: `flowchart TD
-  A[Wallet check - minimum balance] --> B[Order delivered - cash to rider]
-  B --> C[Transaction complete - less ₱2 - 24h window starts]
-  C -->|No complaint| D[Closed - dealer keeps cash]
-  C -->|Valid complaint| E[Refund amount validated]
-  E --> F[Wallet deduction + admin GCash send]
-  E --> G[Cash refund by dealer]
-  G --> H[Dual confirmation in app]
-  F --> I[Ticket closed - recorded]
+  A[Order marked Delivered] --> B[30-minute Return and Full Refund action]
+  B --> C{Eligible request submitted?}
+  C -->|Yes| D[Evidence review and retrieval coordination]
+  C -->|No| E[Order marked Completed]
+  E --> F[One-hour Return and Replace action]
+  F --> G{Eligible request submitted?}
+  G -->|Yes| H[Evidence review and replacement coordination]
+  G -->|No or expired| I[Use Report or Dispute]
+  I --> J[Safety concern remains reviewable]`,
+  },
+  {
+    title: "Delivery Dispute Review",
+    caption:
+      "Both sides are reviewed using the combined order record rather than a single claim or photo.",
+    chart: `flowchart TD
+  A[Delivery, failed-delivery, or reschedule claim] --> B[Notify affected parties]
+  B --> C[Collect status history, GPS, timestamp, photos, contact attempts, communications, and payment record]
+  C --> D{Records consistent?}
+  D -->|Yes| E[Apply supported status or remedy]
+  D -->|No| F[Authorized admin review]
+  F --> G[Request additional evidence and responses]
+  G --> H[Record reasoned resolution and any account action]`,
+  },
+  {
+    title: "Resolution Options",
+    caption:
+      "An approved case may result in redelivery, replacement, partial adjustment, full refund, or another lawful remedy.",
+    chart: `flowchart TD
+  A[Validated issue] --> B{Can the exact issue be corrected?}
+  B -->|Missing item| C[Redeliver missing item]
+  B -->|Replaceable product| D[Return and Replace]
+  B -->|Price shortfall| E[Partial adjustment]
+  B -->|Full unwind required| F[Return and Full Refund]
+  F --> G[Identify and retrieve affected cylinder]
+  G --> H[Coordinate refund and in-app confirmation]
+  C --> I[Close with recorded evidence]
+  D --> I
+  E --> I
   H --> I`,
   },
   {
-    title: "Master Complaint Decision Flow",
-    caption: "Routes complaint intake through window validation, defect/change-of-mind review, and evidence review.",
+    title: "Refund Funding and Payment Method",
+    caption:
+      "The method depends on whether payment was online or COD and whether seller funds have already been released.",
     chart: `flowchart TD
-  A[Customer files complaint - reason + evidence] --> B{Within claim window?}
-  B -->|Yes| C{Defect or change of mind?}
-  B -->|No| Z1[Denied: out of window - safety still escalated]
-  C -->|Defect| D{Evidence review - dealer 24h response}
-  C -->|Change of mind| Z2[Denied: not covered - dealer goodwill optional]
-  D -->|Valid| E[VALIDATED - proceed to resolution]
-  D -->|Insufficient| Z3[Denied: invalid - release normally]
-  E --> F[Continue to Resolution Ladder]`,
-  },
-  {
-    title: "Resolution Ladder",
-    caption: "Replacement is the default, followed by partial refund, then full refund with Kaliwaan Rule.",
-    chart: `flowchart TD
-  A[Validated complaint] --> B[1. Offer replacement - free within 24h - default]
-  B -->|Accepted| C[Tank swap - no money movement]
-  B -->|Declined or no stock| D{Refund type?}
-  D -->|Partial| E[Partial refund - difference only]
-  D -->|Full| F[Full refund - kaliwaan rule]
-  E --> G[Send difference - see funding source]
-  F --> H[Tank + cash exchange simultaneously]
-  C --> I[Ticket closed - recorded]
-  G --> I
+  A[Approved refund] --> B{Payment method}
+  B -->|Supported online payment| C{Funds released?}
+  C -->|No| D[Provider reversal or unreleased settlement]
+  C -->|Yes| E[Dealer or retailer settlement, SCC, or future payout deduction]
+  B -->|Cash on Delivery| F[Documented cash handback or approved transfer]
+  D --> G[Provider processing and confirmation]
+  E --> G
+  F --> H[Dual confirmation or admin review]
+  G --> I[Close after refund record]
   H --> I`,
-  },
-  {
-    title: "Refund Funding Source",
-    caption: "Determines whether refund funding comes from Pending Balance, wallet deduction, cash-on-pickup, or capped goodwill.",
-    chart: `flowchart TD
-  A[Refund needed - what payment method?] -->|Online| B{Released?}
-  A -->|COD| C{Cash-on-pickup feasible?}
-  B -->|Pending| D[Pending balance - void hold - GCash send]
-  B -->|Released| E[Wallet deduction - GCash send]
-  C -->|Yes| F[Cash-on-pickup - dual confirmation]
-  C -->|No| G[Wallet deduction + GCash after retrieval]
-  E --> H{Wallet sufficient?}
-  G --> H
-  H -->|No| I[Negative balance - restricted - 48h top-up]
-  I -->|No top-up| J[Platform goodwill - capped - collection case]`,
   },
 ];
 
@@ -84,7 +91,7 @@ export default function FlowchartsPage() {
     <PolicyLayout
       eyebrow="Policy visuals"
       title="Policy Flowcharts"
-      lead="Five operational diagrams that explain LPG Go PH wallet, complaint, resolution, and refund-funding decisions."
+      lead="Operational diagrams for LPG Go PH return, replacement, refund, delivery-dispute, and Store Service Credit processes."
     >
       {flowcharts.map((item) => (
         <section className="policy-section" key={item.title}>

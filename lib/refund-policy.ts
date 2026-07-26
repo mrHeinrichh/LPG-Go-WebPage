@@ -7,7 +7,6 @@ export type EscrowState = "PENDING" | "RELEASED" | "DEALER_FUNDS_EXHAUSTED";
 export type ComplaintReason = {
   code: string;
   label_en: string;
-  label_tl: string;
   category: ComplaintCategory;
   fault_party: string;
   claim_window_hours: number | null;
@@ -19,7 +18,6 @@ export type ComplaintReason = {
   safety_priority?: boolean;
   show_safety_advisory?: boolean;
   safety_advisory_en?: string;
-  safety_advisory_tl?: string;
   applies_to_payment?: string[];
 };
 
@@ -61,9 +59,9 @@ export const getAllowedResolutions = (reasonCode: string) =>
 export const getFundingSource = (
   paymentMethod: PaymentMethod,
   escrowState?: EscrowState,
-  dealerWalletBalance = 0
+  dealerSccBalance = 0
 ) => {
-  if (dealerWalletBalance < 0) {
+  if (dealerSccBalance < 0) {
     return refundPolicy.refund_funding_matrix.find(
       (row) => row.escrow_state === "DEALER_FUNDS_EXHAUSTED"
     );

@@ -8,22 +8,22 @@ export const metadata: Metadata = {
 
 const laws = [
   {
-    title: "RA 11592 — LPG Industry Regulation Act",
+    title: "RA 11592 - LPG Industry Regulation Act",
     body: "Sets safety and compliance standards for LPG industry participants, including proper handling and qualified LPG containers.",
     href: "https://www.officialgazette.gov.ph/",
   },
   {
-    title: "RA 7394 — Consumer Act of the Philippines",
+    title: "RA 7394 - Consumer Act of the Philippines",
     body: "Protects consumers against deceptive, unfair, and unconscionable sales acts and recognizes remedies for defective products.",
     href: "https://www.officialgazette.gov.ph/",
   },
   {
-    title: "RA 10173 — Data Privacy Act",
+    title: "RA 10173 - Data Privacy Act",
     body: "Grants data subject rights including notice, access, correction, blocking/deletion, objection, and complaint to the NPC.",
     href: "https://privacy.gov.ph/data-privacy-act/",
   },
   {
-    title: "RA 9514 — Fire Code of the Philippines",
+    title: "RA 9514 - Fire Code of the Philippines",
     body: "Provides fire safety standards relevant to LPG storage, fire prevention, and emergency readiness.",
     href: "https://bfp.gov.ph/",
   },

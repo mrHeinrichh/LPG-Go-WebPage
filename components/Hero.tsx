@@ -6,14 +6,13 @@ export default function Hero() {
           <span className="pill">
             <span className="dot" /> LPG Go PH marketplace
           </span>
-          <h1>
-            LPG Go brings <span className="hl">safe LPG delivery</span> to your phone.
-          </h1>
+          <h1>Find Nearby Verified LPG Store</h1>
           <p className="sub">
-            LPG Go helps Filipino households order cooking gas from verified
-            local dealers. Get a refill or a new tank, pay by cash or online,
-            track your rider in real time, and manage support or refund concerns
-            from the order screen.
+            LPG Go is a marketplace platform that connects customers with
+            independent LPG dealers/retailers and delivery riders. We help
+            facilitate orders, delivery coordination, and payments, while LPG
+            products are sold and fulfilled by the participating
+            dealers/retailers.
           </p>
           <div className="hero-cta">
             <a className="btn" href="#how">
@@ -25,16 +24,16 @@ export default function Hero() {
           </div>
           <div className="hero-stats">
             <div className="s">
-              <b>3 taps</b>
-              <span>Brand → size → order type</span>
+              <b>Marketplace</b>
+              <span>Connects customers with LPG dealers/retailers</span>
             </div>
             <div className="s">
-              <b>Live</b>
-              <span>Real-time rider tracking</span>
+              <b>Coordinated</b>
+              <span>Orders, riders, and delivery updates</span>
             </div>
             <div className="s">
-              <b>COD &amp; QR&nbsp;Ph</b>
-              <span>Pay your way</span>
+              <b>Flexible Pay</b>
+              <span>Cash or supported online payments</span>
             </div>
           </div>
         </div>

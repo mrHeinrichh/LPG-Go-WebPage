@@ -9,9 +9,9 @@ export default function CoverageTestimonials() {
             <span className="eyebrow">Coverage</span>
             <h2 className="title">Built for Philippine LPG delivery</h2>
             <p className="lead">
-              Coverage is based on verified dealer service areas. Open the app,
-              pin your location, and LPG Go shows nearby stores that can serve
-              your address.
+              Coverage is based on participating dealer/retailer service areas.
+              Open the app, pin your location, and LPG Go shows available nearby
+              stores that may serve your address.
             </p>
           </div>
           <div className="coverage-tags">

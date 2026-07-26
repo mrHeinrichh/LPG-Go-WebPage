@@ -25,7 +25,7 @@ export default function Download() {
       <div className="wrap">
         <div className="dl-card reveal">
           <span className="eyebrow">Early access</span>
-          <h2 className="title">Get the app — try LPG Go now</h2>
+          <h2 className="title">Get the app and try LPG Go</h2>
           <p className="lead">
             LPG Go is in early access on Android. Grab the APK to start ordering
             today, ahead of the official store releases. Google Play and the iOS
@@ -44,7 +44,7 @@ export default function Download() {
               </svg>
               <span className="dl-apk-text">
                 <b>Get the APK now</b>
-                <small>Android APK · {apkSize}</small>
+                <small>Android APK | {apkSize}</small>
               </span>
             </a>
           </div>

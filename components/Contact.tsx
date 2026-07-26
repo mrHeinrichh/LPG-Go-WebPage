@@ -40,7 +40,7 @@ export default function Contact() {
             <div>
               <h4>Developer</h4>
               <p>
-                Built &amp; maintained by {developer.name} — mrheinrich.vercel.app
+                Built &amp; maintained by {developer.name} at mrheinrich.vercel.app
               </p>
             </div>
           </a>
@@ -70,8 +70,8 @@ export default function Contact() {
             <div>
               <h4>Service area</h4>
               <p>
-                Available in select cities across the Philippines, expanding to
-                more areas soon.
+                Availability depends on participating stores and their active
+                service areas.
               </p>
             </div>
           </div>
@@ -85,10 +85,10 @@ export default function Contact() {
               </svg>
             </div>
             <div>
-              <h4>Become a dealer</h4>
+              <h4>Become a dealer/retailer</h4>
               <p>
-                Want to sell on LPG Go? Email us and our team will help you get
-                verified and listed.
+                Want to sell through LPG Go? Email us for onboarding
+                requirements and application support.
               </p>
             </div>
           </div>
@@ -101,7 +101,7 @@ export default function Contact() {
             </div>
             <div>
               <h4>Support the project</h4>
-              <p>Help keep LPG Go running — donate via GCash, Maya, or bank.</p>
+              <p>Help keep LPG Go running through the listed support methods.</p>
             </div>
           </a>
 

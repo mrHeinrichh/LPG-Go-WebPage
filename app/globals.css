@@ -488,7 +488,7 @@ header .brand img {
 }
 .nav-links a {
   /* White over the blue hero; turns dark when the header becomes solid white
-     on scroll (see `header.scrolled` below). No outline — clean either way. */
+     on scroll (see `header.scrolled` below). No outline - clean either way. */
   color: #fff;
   font-weight: 600;
   font-size: 15px;

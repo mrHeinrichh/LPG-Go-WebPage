@@ -6,7 +6,7 @@ const dealerRequirements = [
 ];
 
 const riderRequirements = [
-  "Dealer-created rider account",
+  "Dealer/retailer-created rider account",
   "Valid ID and contact number",
   "Delivery vehicle details when applicable",
   "Agreement to live tracking and delivery proof rules",
@@ -47,23 +47,23 @@ export default function PartnerPages() {
     <section id="partners" className="partners">
       <div className="wrap">
         <div className="center" style={{ marginBottom: 44 }}>
-          <span className="eyebrow reveal">For dealers and riders</span>
+          <span className="eyebrow reveal">For dealers/retailers and riders</span>
           <h2 className="title reveal d1">Run LPG operations from one app</h2>
           <p className="lead reveal d2">
-            LPG Go supports public applications, admin review, dealer product
-            management, rider assignment, walk-in POS, wallets, cashouts,
-            vouchers, feedback, and dispute workflows.
+            LPG Go supports applications, admin review, dealer/retailer product
+            management, rider assignment, walk-in POS, Store Service Credit
+            (SCC), payouts, vouchers, feedback, and dispute workflows.
           </p>
         </div>
         <div className="partner-grid">
           <Checklist
-            title="Dealer requirements"
+            title="Dealer/retailer requirements"
             subtitle="For stores that want to sell LPG through LPG Go."
             items={dealerRequirements}
           />
           <Checklist
             title="Rider requirements"
-            subtitle="For delivery riders managed by accredited dealers."
+            subtitle="For delivery riders managed by participating dealers/retailers."
             items={riderRequirements}
           />
         </div>

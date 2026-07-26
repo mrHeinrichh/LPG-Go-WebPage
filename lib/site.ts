@@ -6,16 +6,16 @@
 
 export const site = {
   name: "LPG Go",
-  tagline: "On-demand LPG delivery in the Philippines",
+  tagline: "LPG marketplace and delivery coordination in the Philippines",
   description:
-    "LPG Go connects Filipino households with verified local LPG dealers for fast, trackable cooking-gas delivery. Order refills or new tanks, pay cash or online, and track your rider in real time.",
+    "LPG Go is a marketplace platform that connects customers with independent LPG dealers/retailers and delivery riders. We help facilitate orders, delivery coordination, and payments, while LPG products are sold and fulfilled by participating dealers/retailers.",
   url: "https://lpg-go.vercel.app",
   email: "mrheinrichhh@gmail.com",
   locale: "en_PH",
 } as const;
 
 // ---------------------------------------------------------------------------
-// Developer credit — shown in the footer and the support section.
+// Developer credit - shown in the footer and the support section.
 // ---------------------------------------------------------------------------
 export const developer = {
   name: "mrheinrichhh",
@@ -25,27 +25,27 @@ export const developer = {
 } as const;
 
 // ---------------------------------------------------------------------------
-// Social links — official LPG Go accounts. Surfaced in the footer + contact.
+// Social links - official LPG Go accounts. Surfaced in the footer + contact.
 // ---------------------------------------------------------------------------
 export const social = {
   facebook: "https://www.facebook.com/lpggo.ph",
 } as const;
 
 // ---------------------------------------------------------------------------
-// App screenshots — App Store marketing shots shown in the "See it in action"
+// App screenshots - App Store marketing shots shown in the "See it in action"
 // showcase. Images live in `public/screenshots/`.
 // ---------------------------------------------------------------------------
 export const screenshots = [
   { src: "/screenshots/1.png", title: "Delivered to your door", caption: "On-demand LPG gas brought straight to your home." },
-  { src: "/screenshots/2.png", title: "Pick a nearby store", caption: "Choose an accredited dealer, brand, and tank size." },
+  { src: "/screenshots/2.png", title: "Pick a nearby store", caption: "Choose a participating dealer/retailer, brand, and tank size." },
   { src: "/screenshots/3.png", title: "Track your rider", caption: "Follow your delivery live on the map in real time." },
   { src: "/screenshots/4.png", title: "Scan to order", caption: "Scan a store's QR to order again in seconds." },
-  { src: "/screenshots/5.png", title: "Pay your way", caption: "Cash on delivery or secure online payment at checkout." },
+  { src: "/screenshots/5.png", title: "Review payment options", caption: "Use Cash on Delivery or a supported online option when available." },
   { src: "/screenshots/6.png", title: "All your orders", caption: "Every order, status, and receipt in one place." },
 ] as const;
 
 // ---------------------------------------------------------------------------
-// App download — early-access APK + store availability.
+// App download - early-access APK + store availability.
 // The APK is served from `public/downloads/lpg-go-android.apk`.
 // ---------------------------------------------------------------------------
 export const appDownload = {
@@ -60,7 +60,7 @@ export const appDownload = {
 } as const;
 
 // ---------------------------------------------------------------------------
-// Support links — surfaced in the Contact + Support sections and the footer.
+// Support links - surfaced in the Contact + Support sections and the footer.
 // ---------------------------------------------------------------------------
 export type SupportLink = {
   label: string;
@@ -93,7 +93,7 @@ export const supportLinks: SupportLink[] = [
 //
 // Each card shows a real bank QR. The image lives in `public/qr/<id>.png`.
 // Until that file exists, a placeholder QR (from `qrValue`) is shown instead,
-// so nothing ever appears broken — drop the real screenshot in and it swaps in
+// so nothing ever appears broken - drop the real screenshot in and it swaps in
 // automatically (see `qrImage` handling in components/Support.tsx).
 //
 // To update: replace the screenshots in `public/qr/`, or edit the fields below.
@@ -117,12 +117,12 @@ export const supportMethods: SupportMethod[] = [
     brand: "GoTyme Bank",
     accent: "#0AA6B8",
     accountName: "Jhan Elrie Bibangco",
-    accountNumber: "•••• 9469",
+    accountNumber: "**** 9469",
     network: "InstaPay",
     description:
       "Scan with any InstaPay-enabled bank or e-wallet app (GCash, Maya, BPI, etc.) to send your support to this GoTyme Bank account. Transfer fees may apply.",
     qrValue:
-      "GoTyme Bank • Support LPG Go • Jhan Elrie Bibangco • InstaPay • https://mrheinrich.vercel.app",
+      "GoTyme Bank | Support LPG Go | Jhan Elrie Bibangco | InstaPay | https://mrheinrich.vercel.app",
     qrImage: "/qr/gotyme.png",
   },
   {
@@ -130,12 +130,12 @@ export const supportMethods: SupportMethod[] = [
     brand: "MariBank",
     accent: "#F47B20",
     accountName: "Julina Marie Bibangco",
-    accountNumber: "MariBank •••• 5833",
+    accountNumber: "MariBank **** 5833",
     network: "InstaPay",
     description:
       "Scan with any InstaPay app to support via MariBank.",
     qrValue:
-      "MariBank • Support LPG Go • Julina Marie Bibangco • InstaPay • https://mrheinrich.vercel.app",
+      "MariBank | Support LPG Go | Julina Marie Bibangco | InstaPay | https://mrheinrich.vercel.app",
     qrImage: "/qr/maribank-julina.png",
   },
   {
@@ -143,31 +143,31 @@ export const supportMethods: SupportMethod[] = [
     brand: "MariBank",
     accent: "#F47B20",
     accountName: "John Heinrich Fabros",
-    accountNumber: "MariBank •••• 6493",
+    accountNumber: "MariBank **** 6493",
     network: "InstaPay",
     description:
       "Scan with any InstaPay app to support via MariBank.",
     qrValue:
-      "MariBank • Support LPG Go • John Heinrich Fabros • InstaPay • https://mrheinrich.vercel.app",
+      "MariBank | Support LPG Go | John Heinrich Fabros | InstaPay | https://mrheinrich.vercel.app",
     qrImage: "/qr/maribank-john.png",
-    referral: { code: "JF905180", perk: "Get ₱150 when you sign up with this code" },
+    referral: { code: "JF905180", perk: "Get PHP 150 when you sign up with this code" },
   },
 ];
 
 export const navLinks = [
   { href: "/#how", label: "How it works" },
-  { href: "/kaligtasan", label: "Safety" },
+  { href: "/safety", label: "Safety" },
   { href: "/#features", label: "Features" },
-  { href: "/#partners", label: "Dealers & Riders" },
+  { href: "/#partners", label: "Dealers/Retailers & Riders" },
   { href: "/policy/refund-policy", label: "Policies" },
   { href: "/#faq", label: "FAQ" },
 ];
 
 export const coverageAreas = [
-  "Nearby verified dealers",
+  "Nearby participating dealers/retailers",
   "Metro Manila-ready",
   "Province expansion",
-  "Dealer-led delivery zones",
+  "Dealer/retailer-led delivery zones",
 ] as const;
 
 export const testimonials = [
@@ -175,18 +175,18 @@ export const testimonials = [
     name: "Customer household",
     role: "Home cooking refill",
     quote:
-      "Hindi na hulaan kung nasaan na ang rider. Kita sa app ang status, store, presyo, at delivery updates.",
+      "The app makes it easier to see the order status, selected store, price, and available delivery updates.",
   },
   {
-    name: "Local dealer",
-    role: "Accredited LPG seller",
+    name: "Local dealer/retailer",
+    role: "Participating LPG seller",
     quote:
-      "Mas madaling i-manage ang orders, riders, products, vouchers, at wallet transactions in one dashboard.",
+      "Orders, riders, products, vouchers, and Store Service Credit (SCC) activity can be managed from one dashboard.",
   },
   {
     name: "Delivery rider",
-    role: "Dealer rider",
+    role: "Dealer/retailer rider",
     quote:
-      "Clear ang pickup, drop-off, proof photo, at customer contact flow kaya mas maayos ang delivery.",
+      "The pickup, drop-off, proof photo, and customer contact flow make delivery coordination clearer.",
   },
 ] as const;

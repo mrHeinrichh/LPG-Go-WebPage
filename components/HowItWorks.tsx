@@ -2,22 +2,22 @@ const steps = [
   {
     n: "1",
     title: "Pick a store",
-    body: "Browse verified LPG dealers near you, sorted by distance, hours, and ratings.",
+    body: "Browse participating LPG dealers/retailers near you, with distance, operating status, and available store details.",
   },
   {
     n: "2",
     title: "Choose your tank",
-    body: "Select a brand, tank size, and order type — Refill Tank or New Tank.",
+    body: "Select a brand, tank size, and order type: Refill Tank or New Tank.",
   },
   {
     n: "3",
     title: "Checkout",
-    body: "Pay Cash on Delivery or securely online via QR Ph. Apply vouchers if you have one.",
+    body: "Review the full price and pay by Cash on Delivery. Supported online payment options appear when available.",
   },
   {
     n: "4",
     title: "Track & receive",
-    body: "Watch your rider on the live map and confirm delivery with a photo on arrival.",
+    body: "Follow available rider and order updates, inspect the cylinder, and complete the delivery in the app.",
   },
 ];
 

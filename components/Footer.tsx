@@ -13,8 +13,8 @@ export default function Footer() {
               <img src="/logo.png" alt="LPG Go" />
             </a>
             <p style={{ marginTop: 16, maxWidth: 320, fontSize: "14.5px" }}>
-              On-demand LPG delivery that connects Filipino homes with verified
-              local dealers — fast, fair, and trackable.
+              A marketplace connecting customers with participating LPG
+              dealers/retailers and delivery riders.
             </p>
             <div className="socials">
               <a
@@ -50,8 +50,8 @@ export default function Footer() {
           </div>
           <div>
             <h5>Safety</h5>
-            <a href="/kaligtasan">Safety Manual</a>
-            <a href="/kaligtasan/emergency">Emergency Procedure</a>
+            <a href="/safety">Safety Manual</a>
+            <a href="/safety/emergency">Emergency Procedure</a>
             <a href="/#contact">Report a Safety Issue</a>
             <a href="/#support">Support the project</a>
             <a href={`mailto:${site.email}`}>Email support</a>
@@ -67,10 +67,10 @@ export default function Footer() {
         </div>
         <div className="copy">
           <span>
-            © {year} {site.name} PH. Trademark App. No. 4/2026/00501327 filed
+            &copy; {year} {site.name} PH. Trademark App. No. 4/2026/00501327 filed
             with IPOPHIL.
           </span>
-          <span>Compliant with RA 11592, RA 7394, and RA 10173.</span>
+          <span>Policies reference RA 11592, RA 7394, and RA 10173.</span>
         </div>
       </div>
     </footer>

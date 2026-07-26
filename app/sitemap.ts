@@ -7,8 +7,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/policy/refund-policy",
     "/policy/flowcharts",
     "/policy/configuration",
-    "/kaligtasan",
-    "/kaligtasan/emergency",
+    "/safety",
+    "/safety/emergency",
     "/consumer-rights",
     "/about/compliance",
   ];
