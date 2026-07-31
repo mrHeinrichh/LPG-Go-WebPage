@@ -37,6 +37,13 @@ body {
   line-height: 1.6;
   overflow-x: hidden;
 }
+main {
+  animation: page-enter 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+@keyframes page-enter {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
 a {
   color: inherit;
   text-decoration: none;
@@ -578,6 +585,9 @@ header.scrolled .nav-links a {
   display: inline-flex;
   align-items: center;
   gap: 8px;
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
   background: var(--accent);
   color: #fff;
   font-weight: 700;
@@ -588,6 +598,17 @@ header.scrolled .nav-links a {
   cursor: pointer;
   box-shadow: 0 10px 24px rgba(232, 119, 46, 0.32);
   transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s;
+}
+.btn::after {
+  content: "";
+  position: absolute;
+  inset: -30% auto -30% -45%;
+  width: 34%;
+  z-index: 0;
+  pointer-events: none;
+  background: rgba(255, 255, 255, 0.28);
+  transform: skewX(-22deg) translateX(-240%);
+  transition: transform 0.55s ease;
 }
 .btn:hover {
   transform: translateY(-2px);
@@ -749,6 +770,15 @@ header.scrolled .menu-toggle {
   height: 100%;
   object-fit: cover;
   object-position: top;
+}
+.kinetic-title {
+  animation: kinetic-title 5.5s ease-in-out infinite;
+  transform-origin: left center;
+  text-shadow: 0 0 18px rgba(100, 191, 255, 0.16);
+}
+@keyframes kinetic-title {
+  0%, 100% { transform: translate3d(0, 0, 0); text-shadow: 0 0 18px rgba(100, 191, 255, 0.16); }
+  50% { transform: translate3d(0, -3px, 0); text-shadow: 0 0 30px rgba(255, 122, 26, 0.28); }
 }
 .hero-card-back {
   top: 10px;
@@ -921,6 +951,9 @@ header.scrolled .menu-toggle {
 
 /* ---------- REVEAL ---------- */
 .reveal {
+  --tilt-x: 0deg;
+  --tilt-y: 0deg;
+  --tilt-lift: 0px;
   opacity: 0;
   transform: translate3d(0, 30px, 0) scale(0.985);
   transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1),
@@ -929,6 +962,10 @@ header.scrolled .menu-toggle {
 .reveal.in {
   opacity: 1;
   transform: none;
+}
+.reveal.in.interactive-tilt {
+  transform: perspective(1100px) translate3d(0, var(--tilt-lift), 0) rotateX(var(--tilt-x)) rotateY(var(--tilt-y));
+  transform-style: preserve-3d;
 }
 .reveal.d1 {
   transition-delay: 0.08s;
@@ -1399,12 +1436,15 @@ header.scrolled .menu-toggle {
   border-radius: 14px;
   z-index: -1;
 }
+.btn:hover::after {
+  transform: skewX(-22deg) translateX(540%);
+}
 .coverage-network-map {
   position: relative;
   width: min(100%, 252px);
   height: 302px;
   pointer-events: none;
-  z-index: 1;
+  z-index: 2;
 }
 .coverage-network-map img {
   display: block;
@@ -1424,6 +1464,7 @@ header.scrolled .menu-toggle {
   background: rgba(157, 224, 255, 0.82);
   box-shadow: 0 0 14px rgba(57, 187, 255, 0.92);
   animation: coverage-network-scan 5.4s linear infinite;
+  z-index: 3;
 }
 @keyframes coverage-network-scan {
   0% { transform: translateY(0); opacity: 0; }
@@ -1734,13 +1775,51 @@ header.scrolled .menu-toggle {
 
 /* ---------- DOWNLOAD / GET THE APP ---------- */
 .download {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
   background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 60%, #356bb0 100%);
   color: #fff;
+}
+.download > .wrap {
+  position: relative;
+  z-index: 1;
+}
+.download-rider-art {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+.download-rider-art::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(23, 56, 101, 0.98) 0%, rgba(23, 56, 101, 0.9) 48%, rgba(11, 37, 70, 0.28) 100%);
+}
+.download-rider-art img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  opacity: 1;
 }
 .dl-card {
   max-width: 760px;
   margin: 0 auto;
   text-align: center;
+}
+@media (min-width: 901px) {
+  .download .dl-card {
+    width: 64%;
+    max-width: 720px;
+    margin-left: 3%;
+    margin-right: auto;
+  }
 }
 .download .eyebrow {
   color: #ffd9bd;
@@ -2136,6 +2215,9 @@ footer a:hover {
   }
 }
 @media (max-width: 640px) {
+  .download-rider-art img {
+    object-position: 72% center;
+  }
   .coverage-map-wrap {
     min-height: 220px;
   }

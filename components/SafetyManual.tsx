@@ -2,22 +2,22 @@ const lessons = [
   {
     title: "Before you order",
     body: "Choose the correct brand and size, confirm your address pin, and keep a clear path for safe cylinder handoff.",
-    image: "/safety/art/before-you-order.png",
+    image: "/safety/art/before-you-order-v2.webp",
   },
   {
     title: "When the tank arrives",
     body: "Check the seal, look for dents or heavy rust, and refuse any cylinder that smells strongly of gas before installation.",
-    image: "/safety/art/tank-arrival.png",
+    image: "/safety/art/tank-arrival-v2.webp",
   },
   {
     title: "Safe home setup",
     body: "Keep LPG upright in a ventilated area, away from heat, electrical sparks, and children. Never store cylinders in closed cabinets.",
-    image: "/safety/art/safe-home-setup.png",
+    image: "/safety/art/safe-home-setup-v2.webp",
   },
   {
     title: "Leak check",
     body: "Use soapy water on the valve and hose joints. Bubbles mean a leak. Do not use a flame to test.",
-    image: "/safety/art/leak-check.png",
+    image: "/safety/art/leak-check-v2.webp",
   },
 ];
 

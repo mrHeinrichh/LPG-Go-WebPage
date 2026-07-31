@@ -32,6 +32,37 @@ export default function ScrollReveal() {
 
       els.forEach((el) => io.observe(el));
 
+      const canTilt = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+      const tiltEls = canTilt
+        ? Array.from(
+            document.querySelectorAll<HTMLElement>(
+              ".card.reveal, .safety-reference-card.reveal, .testimonial.reveal, .shot.reveal, .contact-card.reveal, .dl-card.reveal, .coverage-band.reveal"
+            )
+          )
+        : [];
+
+      const resetTilt = (el: HTMLElement) => {
+        el.style.setProperty("--tilt-x", "0deg");
+        el.style.setProperty("--tilt-y", "0deg");
+        el.style.setProperty("--tilt-lift", "0px");
+      };
+
+      const tiltListeners = tiltEls.map((el) => {
+        el.classList.add("interactive-tilt");
+        const onMove = (event: PointerEvent) => {
+          const rect = el.getBoundingClientRect();
+          const x = (event.clientX - rect.left) / rect.width - 0.5;
+          const y = (event.clientY - rect.top) / rect.height - 0.5;
+          el.style.setProperty("--tilt-x", `${(-y * 3.5).toFixed(2)}deg`);
+          el.style.setProperty("--tilt-y", `${(x * 4).toFixed(2)}deg`);
+          el.style.setProperty("--tilt-lift", "-5px");
+        };
+        const onLeave = () => resetTilt(el);
+        el.addEventListener("pointermove", onMove);
+        el.addEventListener("pointerleave", onLeave);
+        return { el, onMove, onLeave };
+      });
+
       const updateParallax = () => {
         const viewportCenter = window.innerHeight / 2;
         parallaxEls.forEach((el) => {
@@ -61,6 +92,12 @@ export default function ScrollReveal() {
         window.cancelAnimationFrame(frame);
         window.removeEventListener("scroll", requestParallaxUpdate);
         window.removeEventListener("resize", requestParallaxUpdate);
+        tiltListeners.forEach(({ el, onMove, onLeave }) => {
+          el.removeEventListener("pointermove", onMove);
+          el.removeEventListener("pointerleave", onLeave);
+          el.classList.remove("interactive-tilt");
+          resetTilt(el);
+        });
       };
     }
   }, []);

@@ -25,6 +25,10 @@ export default function Download() {
 
   return (
     <section id="download" className="download">
+      <div className="download-rider-art" aria-hidden="true">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img src="/download-rider-background-v2.webp" alt="" />
+      </div>
       <div className="wrap">
         <div className="dl-card reveal">
           <span className="eyebrow">Early access</span>

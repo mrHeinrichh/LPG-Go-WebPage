@@ -6,7 +6,7 @@ export default function Hero() {
           <span className="pill">
             <span className="dot" /> LPG Go PH marketplace
           </span>
-          <h1>Find Nearby Verified LPG Store</h1>
+          <h1 className="kinetic-title">Find Nearby Verified LPG Store</h1>
           <p className="sub">
             LPG Go is a marketplace platform that connects customers with
             independent LPG dealers/retailers and delivery riders. We help
