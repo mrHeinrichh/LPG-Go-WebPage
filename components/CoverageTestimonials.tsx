@@ -5,7 +5,7 @@ export default function CoverageTestimonials() {
     <section id="coverage" className="coverage">
       <div className="wrap">
         <div className="coverage-band reveal">
-          <div>
+          <div className="coverage-copy">
             <span className="eyebrow">Coverage</span>
             <h2 className="title">Built for Philippine LPG delivery</h2>
             <p className="lead">
@@ -13,6 +13,12 @@ export default function CoverageTestimonials() {
               Open the app, pin your location, and LPG Go shows available nearby
               stores that may serve your address.
             </p>
+          </div>
+          <div className="coverage-map-wrap" aria-hidden="true">
+            <div className="coverage-network-map">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/hero-philippines-network-transparent.png" alt="" />
+            </div>
           </div>
           <div className="coverage-tags">
             {coverageAreas.map((area) => (

@@ -2,18 +2,22 @@ const lessons = [
   {
     title: "Before you order",
     body: "Choose the correct brand and size, confirm your address pin, and keep a clear path for safe cylinder handoff.",
+    image: "/safety/art/before-you-order.png",
   },
   {
     title: "When the tank arrives",
     body: "Check the seal, look for dents or heavy rust, and refuse any cylinder that smells strongly of gas before installation.",
+    image: "/safety/art/tank-arrival.png",
   },
   {
     title: "Safe home setup",
     body: "Keep LPG upright in a ventilated area, away from heat, electrical sparks, and children. Never store cylinders in closed cabinets.",
+    image: "/safety/art/safe-home-setup.png",
   },
   {
     title: "Leak check",
     body: "Use soapy water on the valve and hose joints. Bubbles mean a leak. Do not use a flame to test.",
+    image: "/safety/art/leak-check.png",
   },
 ];
 
@@ -41,14 +45,9 @@ export default function SafetyManual() {
 
         <div className="safety-grid">
           {lessons.map((lesson, i) => (
-            <article key={lesson.title} className={`safety-card reveal d${i % 4}`}>
-              <div className="safety-illo" aria-hidden="true">
-                <svg viewBox="0 0 120 96">
-                  <rect x="36" y="24" width="48" height="58" rx="14" />
-                  <path d="M48 24v-8h24v8M47 42h26M47 56h26" />
-                  <circle cx="82" cy="26" r="11" />
-                  <path d="M77 26l3 3 7-8" />
-                </svg>
+            <article key={lesson.title} className={`safety-card safety-reference-card reveal d${i % 4}`}>
+              <div className="safety-illo">
+                <img src={lesson.image} alt="" />
               </div>
               <h3>{lesson.title}</h3>
               <p>{lesson.body}</p>

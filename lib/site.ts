@@ -18,7 +18,7 @@ export const site = {
 // Developer credit - shown in the footer and the support section.
 // ---------------------------------------------------------------------------
 export const developer = {
-  name: "mrheinrichhh",
+  name: "Ascend One Technologies Inc.",
   role: "Developer & Maintainer",
   website: "https://mrheinrich.vercel.app",
   email: "mrheinrichhh@gmail.com",

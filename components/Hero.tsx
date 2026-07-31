@@ -37,21 +37,35 @@ export default function Hero() {
             </div>
           </div>
         </div>
-        <div className="reveal in d2">
-          <div className="phone" aria-hidden="true">
-            <div className="screen">
-              <div className="topbar" />
-              <div className="logo-card">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src="/logo.png" alt="" />
+        <div className="hero-scene reveal in d2" aria-hidden="true">
+          <div className="hero-network-map">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/hero-philippines-network-transparent.png" alt="" />
+          </div>
+          <div className="hero-card hero-card-back" data-parallax="0.045">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/screenshots/2.png" alt="" />
+          </div>
+          <div className="hero-card hero-card-front" data-parallax="-0.035">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/screenshots/3.png" alt="" />
+          </div>
+          <div className="hero-phone-wrap" data-parallax="0.075">
+            <div className="phone">
+              <div className="screen">
+                <div className="topbar" />
+                <div className="logo-card">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src="/logo.png" alt="" />
+                </div>
+                <div className="rows">
+                  <div className="row m" />
+                  <div className="row s" />
+                  <div className="row m" />
+                  <div className="row s" />
+                </div>
+                <div className="cta" />
               </div>
-              <div className="rows">
-                <div className="row m" />
-                <div className="row s" />
-                <div className="row m" />
-                <div className="row s" />
-              </div>
-              <div className="cta" />
             </div>
           </div>
         </div>

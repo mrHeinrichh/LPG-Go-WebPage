@@ -7,8 +7,8 @@ export const metadata: Metadata = {
   title: `${site.name} - ${site.tagline}`,
   description: site.description,
   applicationName: site.name,
-  authors: [{ name: "mrheinrichhh", url: "https://mrheinrich.vercel.app" }],
-  creator: "mrheinrichhh",
+  authors: [{ name: "Ascend One Technologies Inc." }],
+  creator: "Ascend One Technologies Inc.",
   keywords: [
     "LPG delivery",
     "Philippines",

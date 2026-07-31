@@ -40,7 +40,7 @@ export default function Contact() {
             <div>
               <h4>Developer</h4>
               <p>
-                Built &amp; maintained by {developer.name} at mrheinrich.vercel.app
+                Built &amp; maintained by {developer.name}
               </p>
             </div>
           </a>
