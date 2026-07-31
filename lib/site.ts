@@ -51,6 +51,7 @@ export const screenshots = [
 export const appDownload = {
   apkUrl: "/downloads/lpg-go-android.apk",
   apkSize: "90.0 MB",
+  apkAvailable: false,
   apkSha256:
     "12ab28e1a14660f141e31f410a30c6eeb1e07cc87b81bfb6b1375ee66bce902e",
   stores: [

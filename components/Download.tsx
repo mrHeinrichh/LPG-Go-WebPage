@@ -1,3 +1,6 @@
+"use client";
+
+import { useState } from "react";
 import { appDownload } from "@/lib/site";
 
 const storeIcon = (id: string) => {
@@ -17,8 +20,8 @@ const storeIcon = (id: string) => {
 };
 
 export default function Download() {
-  const { apkUrl, apkSize, apkSha256, stores } = appDownload;
-  const isFile = apkUrl.toLowerCase().endsWith(".apk");
+  const { apkAvailable, apkSize, stores } = appDownload;
+  const [apkNotice, setApkNotice] = useState(false);
 
   return (
     <section id="download" className="download">
@@ -27,32 +30,32 @@ export default function Download() {
           <span className="eyebrow">Early access</span>
           <h2 className="title">Get the app and try LPG Go</h2>
           <p className="lead">
-            LPG Go is in early access on Android. Grab the APK to start ordering
-            today, ahead of the official store releases. Google Play and the iOS
-            App Store are on the way.
+            LPG Go is preparing its Android early-access release. The APK
+            download will be available soon, ahead of the official Google Play
+            and iOS App Store releases.
           </p>
 
           <div className="dl-actions">
-            <a
+            <button
               className="btn dl-apk"
-              href={apkUrl}
-              {...(isFile ? { download: "" } : {})}
+              type="button"
+              onClick={() => !apkAvailable && setApkNotice(true)}
             >
               <svg className="svg" viewBox="0 0 24 24" aria-hidden="true">
                 <path d="M12 3v12m0 0l-4-4m4 4l4-4" />
                 <path d="M5 19h14" />
               </svg>
               <span className="dl-apk-text">
-                <b>Get the APK now</b>
+                <b>{apkNotice ? "APK not available yet" : "APK coming soon"}</b>
                 <small>Android APK | {apkSize}</small>
               </span>
-            </a>
+            </button>
           </div>
 
-          <p className="apk-meta">
-            Direct download: <a href={apkUrl} download>lpg-go-android.apk</a>
-            <br />
-            SHA-256: <code>{apkSha256}</code>
+          <p className="apk-meta" aria-live="polite">
+            {apkNotice
+              ? "APK is not available for download yet. Please check back soon."
+              : "APK download is not available yet."}
           </p>
 
           <div className="store-badges">
