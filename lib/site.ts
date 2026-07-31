@@ -10,7 +10,7 @@ export const site = {
   description:
     "LPG Go is a marketplace platform that connects customers with independent LPG dealers/retailers and delivery riders. We help facilitate orders, delivery coordination, and payments, while LPG products are sold and fulfilled by participating dealers/retailers.",
   url: "https://lpg-go.vercel.app",
-  email: "mrheinrichhh@gmail.com",
+  email: "lpggo.philippines@gmail.com",
   locale: "en_PH",
 } as const;
 
