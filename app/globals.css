@@ -2084,6 +2084,22 @@ footer a:hover {
   }
 }
 @media (max-width: 640px) {
+  .coverage-map-wrap {
+    min-height: 220px;
+  }
+  .coverage-network-map {
+    width: 180px;
+    height: 216px;
+  }
+  .coverage-network-map::after {
+    animation-name: coverage-network-scan-mobile;
+  }
+  @keyframes coverage-network-scan-mobile {
+    0% { transform: translateY(0); opacity: 0; }
+    12% { opacity: 0.78; }
+    84% { opacity: 0.56; }
+    100% { transform: translateY(214px); opacity: 0; }
+  }
   .page-hero::before,
   .page-hero::after {
     display: none;
