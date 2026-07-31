@@ -3,6 +3,10 @@ import { coverageAreas, testimonials } from "@/lib/site";
 export default function CoverageTestimonials() {
   return (
     <section id="coverage" className="coverage">
+      <div className="coverage-delivery-backdrop" aria-hidden="true">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img src="/coverage-delivery-overlay.png" alt="" />
+      </div>
       <div className="wrap">
         <div className="coverage-band reveal">
           <div className="coverage-copy">
