@@ -509,12 +509,20 @@ header {
   inset: 0 0 auto 0;
   z-index: 100;
   transition: background 0.35s ease, box-shadow 0.35s ease, padding 0.35s ease;
+  background-color: rgba(14, 43, 76, 0.82);
+  background-image:
+    linear-gradient(rgba(91, 178, 255, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(91, 178, 255, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(23, 93, 153, 0.18), rgba(8, 31, 57, 0.08));
+  background-size: 32px 32px, 32px 32px, 100% 100%;
+  backdrop-filter: blur(14px) saturate(1.15);
+  border-bottom: 1px solid rgba(102, 187, 255, 0.2);
+  box-shadow: 0 8px 26px rgba(3, 18, 37, 0.2);
   padding: 16px 0;
 }
 header.scrolled {
-  background: rgba(7, 9, 15, 0.88);
-  backdrop-filter: blur(14px);
-  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.32);
+  background-color: rgba(9, 34, 62, 0.95);
+  box-shadow: 0 10px 30px rgba(2, 16, 34, 0.4);
   padding: 9px 0;
 }
 .nav {
@@ -549,14 +557,14 @@ header .brand img {
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 28px;
+  gap: clamp(12px, 1.65vw, 24px);
 }
 .nav-links a {
-  /* White over the blue hero; turns dark when the header becomes solid white
-     on scroll (see `header.scrolled` below). No outline - clean either way. */
+  /* White remains clear over both the hero and the navy glass header. */
   color: #fff;
   font-weight: 600;
   font-size: 15px;
+  white-space: nowrap;
   position: relative;
   opacity: 0.92;
   transition: opacity 0.2s, color 0.3s ease;
@@ -623,6 +631,10 @@ header.scrolled .nav-links a {
 .btn.ghost:hover {
   background: rgba(255, 255, 255, 0.26);
 }
+.nav .btn.app-cta {
+  flex-shrink: 0;
+  white-space: nowrap;
+}
 .menu-toggle {
   display: none;
   background: none;
@@ -671,32 +683,39 @@ header.scrolled .menu-toggle {
   position: relative;
   z-index: 2;
   display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
   gap: 40px;
   align-items: center;
 }
 .hero-scene {
   position: relative;
+  top: -88px;
+  right: auto;
   justify-self: center;
-  width: min(100%, 470px);
-  min-height: 470px;
+  width: min(51vw, 660px);
+  aspect-ratio: 1.22;
   isolation: isolate;
 }
 .hero-scene::before {
   content: "";
   position: absolute;
-  inset: 14% 6% 6% 20%;
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  border-radius: 30px;
-  transform: rotate(-8deg);
-  z-index: -1;
+  z-index: 0;
+  inset: 9% 3% 4% 7%;
+  border: 1px solid rgba(101, 197, 255, 0.2);
+  border-radius: 26px;
+  background:
+    linear-gradient(rgba(73, 166, 225, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(73, 166, 225, 0.08) 1px, transparent 1px);
+  background-size: 42px 42px;
+  box-shadow: inset 0 0 42px rgba(22, 130, 205, 0.08);
+  pointer-events: none;
 }
 .hero-network-map {
   position: absolute;
-  top: -96px;
-  left: -82px;
-  width: 320px;
-  height: 675px;
+  top: -5%;
+  left: -2%;
+  width: 62%;
+  height: 110%;
   z-index: 0;
   display: grid;
   place-items: center;
@@ -721,6 +740,63 @@ header.scrolled .menu-toggle {
   background: rgba(157, 224, 255, 0.8);
   box-shadow: 0 0 14px rgba(57, 187, 255, 0.92);
   animation: philippines-network-scan 5.4s linear infinite;
+}
+.hero-device {
+  --parallax-y: 0px;
+  position: absolute;
+  z-index: 2;
+  aspect-ratio: 241 / 476;
+  will-change: transform;
+}
+.hero-device img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  image-rendering: auto;
+  backface-visibility: hidden;
+  filter: contrast(1.04) saturate(1.03) drop-shadow(0 24px 28px rgba(2, 12, 30, 0.52));
+  animation: hero-device-float 6s ease-in-out infinite;
+  transform-origin: center bottom;
+}
+.hero-device-customer {
+  left: 6%;
+  bottom: 8%;
+  width: 27%;
+  transform: translate3d(0, var(--parallax-y), 0) rotate(-7deg);
+}
+.hero-device-customer img {
+  animation-delay: -1.4s;
+}
+.hero-device-logo {
+  z-index: 3;
+  left: 50%;
+  bottom: 2%;
+  width: 31%;
+  aspect-ratio: 247 / 484;
+  transform: translate3d(-50%, var(--parallax-y), 0);
+}
+.hero-device-logo img {
+  animation-delay: -0.4s;
+  filter: contrast(1.04) saturate(1.03) drop-shadow(0 30px 34px rgba(2, 12, 30, 0.58));
+}
+.hero-device-tracking {
+  right: 5%;
+  bottom: 8%;
+  width: 27%;
+  transform: translate3d(0, var(--parallax-y), 0) rotate(7deg);
+}
+.hero-device-tracking img {
+  animation-delay: -2.6s;
+}
+@keyframes hero-device-float {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(0, -10px, 0) scale(1.012);
+  }
 }
 @keyframes philippines-network-pulse {
   0%,
@@ -839,17 +915,25 @@ header.scrolled .menu-toggle {
   flex-wrap: wrap;
 }
 .hero-stats {
-  display: flex;
-  gap: 30px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
   margin-top: 40px;
 }
+.hero-stats .s {
+  min-width: 0;
+}
 .hero-stats .s b {
-  font-size: 26px;
+  font-size: 22px;
   font-weight: 800;
   display: block;
+  line-height: 1.2;
+  white-space: nowrap;
 }
 .hero-stats .s span {
+  display: block;
   font-size: 13px;
+  line-height: 1.55;
   color: rgba(255, 255, 255, 0.75);
 }
 
@@ -2127,12 +2211,31 @@ footer a:hover {
 }
 
 /* ---------- RESPONSIVE ---------- */
+@media (min-width: 901px) and (max-width: 1050px) {
+  .nav {
+    gap: 10px;
+  }
+  .nav-links {
+    gap: 9px;
+  }
+  .nav-links a {
+    font-size: 14px;
+  }
+  .nav .btn.app-cta {
+    padding: 10px 16px;
+    font-size: 13.5px;
+  }
+}
 @media (max-width: 900px) {
   .hero .wrap {
     grid-template-columns: 1fr;
   }
   .hero-scene {
-    display: none;
+    display: block;
+    width: min(100%, 620px);
+    top: -38px;
+    right: auto;
+    margin: 8px auto -38px;
   }
   .phone {
     display: none;
@@ -2180,7 +2283,13 @@ footer a:hover {
     position: fixed;
     inset: 64px 0 auto 0;
     flex-direction: column;
-    background: #0d1420;
+    background-color: #102f53;
+    background-image:
+      linear-gradient(rgba(91, 178, 255, 0.065) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(91, 178, 255, 0.065) 1px, transparent 1px),
+      linear-gradient(135deg, rgba(25, 91, 148, 0.28), rgba(8, 31, 57, 0.16));
+    background-size: 32px 32px, 32px 32px, 100% 100%;
+    border-bottom: 1px solid rgba(102, 187, 255, 0.24);
     padding: 18px 6%;
     gap: 6px;
     box-shadow: var(--shadow);
@@ -2210,11 +2319,15 @@ footer a:hover {
     padding: 70px 0;
   }
   .hero-stats {
-    flex-wrap: wrap;
-    gap: 22px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
   }
 }
 @media (max-width: 640px) {
+  .hero-stats {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
   .download-rider-art img {
     object-position: 72% center;
   }

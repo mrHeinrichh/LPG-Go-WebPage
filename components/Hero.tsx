@@ -42,31 +42,26 @@ export default function Hero() {
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img src="/hero-philippines-network-transparent.png" alt="" />
           </div>
-          <div className="hero-card hero-card-back" data-parallax="0.045">
+          <div
+            className="hero-device hero-device-customer"
+            data-parallax="0.045"
+          >
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/screenshots/2.png" alt="" />
+            <img src="/hero-phones/customer-marketplace-hq-enhanced.png" alt="" />
           </div>
-          <div className="hero-card hero-card-front" data-parallax="-0.035">
+          <div
+            className="hero-device hero-device-logo"
+            data-parallax="0.075"
+          >
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/screenshots/3.png" alt="" />
+            <img src="/hero-phones/lpggo-logo-hq-enhanced.png" alt="" />
           </div>
-          <div className="hero-phone-wrap" data-parallax="0.075">
-            <div className="phone">
-              <div className="screen">
-                <div className="topbar" />
-                <div className="logo-card">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src="/logo.png" alt="" />
-                </div>
-                <div className="rows">
-                  <div className="row m" />
-                  <div className="row s" />
-                  <div className="row m" />
-                  <div className="row s" />
-                </div>
-                <div className="cta" />
-              </div>
-            </div>
+          <div
+            className="hero-device hero-device-tracking"
+            data-parallax="-0.035"
+          >
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/hero-phones/rider-tracking-hq-enhanced.png" alt="" />
           </div>
         </div>
       </div>
