@@ -743,6 +743,7 @@ header.scrolled .menu-toggle {
 }
 .hero-device {
   --parallax-y: 0px;
+  --phone-offset-y: 32px;
   position: absolute;
   z-index: 2;
   aspect-ratio: 241 / 476;
@@ -763,7 +764,7 @@ header.scrolled .menu-toggle {
   left: 6%;
   bottom: 8%;
   width: 27%;
-  transform: translate3d(0, var(--parallax-y), 0) rotate(-7deg);
+  transform: translate3d(0, calc(var(--parallax-y) + var(--phone-offset-y)), 0) rotate(-7deg);
 }
 .hero-device-customer img {
   animation-delay: -1.4s;
@@ -774,7 +775,7 @@ header.scrolled .menu-toggle {
   bottom: 2%;
   width: 31%;
   aspect-ratio: 247 / 484;
-  transform: translate3d(-50%, var(--parallax-y), 0);
+  transform: translate3d(-50%, calc(var(--parallax-y) + var(--phone-offset-y)), 0);
 }
 .hero-device-logo img {
   animation-delay: -0.4s;
@@ -784,7 +785,7 @@ header.scrolled .menu-toggle {
   right: 5%;
   bottom: 8%;
   width: 27%;
-  transform: translate3d(0, var(--parallax-y), 0) rotate(7deg);
+  transform: translate3d(0, calc(var(--parallax-y) + var(--phone-offset-y)), 0) rotate(7deg);
 }
 .hero-device-tracking img {
   animation-delay: -2.6s;
@@ -2229,6 +2230,9 @@ footer a:hover {
 @media (max-width: 900px) {
   .hero .wrap {
     grid-template-columns: 1fr;
+  }
+  .hero-device {
+    --phone-offset-y: 20px;
   }
   .hero-scene {
     display: block;
