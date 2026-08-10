@@ -10,15 +10,18 @@ export default function Terms() {
         </div>
         <div className="doc reveal d1">
           <p className="updated">
-            Effective and last updated: July 26, 2026
+            Effective and last updated: August 10, 2026
           </p>
           <p>
             These Terms &amp; Conditions (&quot;Terms&quot;) govern access to and
             use of the LPG Go website, mobile application, marketplace,
-            dashboards, ordering, delivery coordination, payment, Store Service
-            Credit, support, and related services (collectively,
-            &quot;LPG Go&quot;). They apply to customers, dealers/retailers,
-            riders, applicants, and other users.
+            dashboards, ordering, delivery coordination, payments, merchant
+            subscriptions, store-approved Credit Orders, cylinder tracking,
+            Store Service Credit, support, and related services (collectively,
+            &quot;LPG Go&quot;). They apply to customers, merchants, riders,
+            applicants, administrators, and other users. In these Terms,
+            &quot;merchant&quot; means an independent participating LPG
+            dealer/retailer.
           </p>
           <p>
             By creating an account, submitting an application, placing or
@@ -45,6 +48,13 @@ export default function Terms() {
             refunds, and enforcement without becoming the product seller,
             carrier, employer, or government regulator.
           </p>
+          <p>
+            LPG Go will exercise the level of diligence required of an online
+            marketplace under applicable Philippine law. A platform disclaimer
+            does not remove LPG Go&apos;s own duties concerning merchant
+            information, regulated listings, data protection, complaint
+            handling, takedowns, or other non-waivable obligations.
+          </p>
 
           <h3>2. Eligibility, Accounts, and Electronic Records</h3>
           <ul>
@@ -60,9 +70,9 @@ export default function Terms() {
             payout, or resolving a dispute.
           </p>
 
-          <h3>3. Dealer/Retailer Legal Compliance</h3>
+          <h3>3. Merchant Legal Compliance</h3>
           <p>
-            Dealers/retailers must obtain and maintain all licenses,
+            Merchants must obtain and maintain all licenses,
             registrations, permits, certificates, authorizations, and safety
             approvals required for their actual business and location. Depending
             on applicable law and activity, LPG Go may require a business
@@ -73,7 +83,7 @@ export default function Terms() {
             location, and expiration records.
           </p>
           <p>
-            Dealers/retailers must submit authentic, complete, current
+            Merchants must submit authentic, complete, current
             documents; monitor expiration; promptly upload renewals; and notify
             LPG Go of suspension, revocation, investigation, relocation,
             ownership change, or any event affecting legal authority to operate.
@@ -97,8 +107,24 @@ export default function Terms() {
             license, investigate, enforce, suspend, or revoke.
           </p>
 
-          <h3>5. Dealer/Retailer Responsibilities</h3>
-          <p>Each dealer/retailer is solely responsible for:</p>
+          <h3>5. LPG Go and Administrator Responsibilities</h3>
+          <p>LPG Go and its authorized administrators are responsible for:</p>
+          <ul>
+            <li>using ordinary diligence in marketplace onboarding, merchant information, regulated-product controls, and complaint handling;</li>
+            <li>showing material order information and customer-facing charges before confirmation;</li>
+            <li>maintaining reasonable access controls, server-side financial mutations, audit records, and privacy safeguards appropriate to risk;</li>
+            <li>applying support, suspension, evidence, and dispute processes consistently, with human review where a material automated flag is contested; and</li>
+            <li>acting on valid government orders, safety notices, prohibited listings, and substantiated reports as required by law.</li>
+          </ul>
+          <p>
+            An administrator&apos;s operational decision is not a court judgment or
+            government certification. Administrators may correct records and
+            reverse unauthorized or erroneous entries, but may not secretly
+            alter a completed customer total or fabricate evidence.
+          </p>
+
+          <h3>6. Merchant Responsibilities</h3>
+          <p>Each merchant is solely responsible for:</p>
           <ul>
             <li>lawful LPG source, brand authority, authenticity, correct net content, cylinder ownership or exchange authority, condition, seal, valve, requalification, and safe storage;</li>
             <li>accurate listings, prices, fees under its control, stock, service area, operating hours, promotions, tax treatment, and receipts;</li>
@@ -108,13 +134,13 @@ export default function Terms() {
             <li>cooperating with valid complaints, inspections, recalls, investigations, and lawful government requests.</li>
           </ul>
 
-          <h3>6. Rider Responsibilities</h3>
+          <h3>7. Rider Responsibilities</h3>
           <p>
             Riders must use only an authorized account, safely transport and
             handle cylinders, follow the assigned order, protect customer data,
             provide truthful status updates, take required pickup or delivery
             evidence, collect only the in-app amount due, and follow lawful
-            instructions from the responsible dealer/retailer.
+            instructions from the responsible merchant.
           </p>
           <p>
             Riders must not falsify GPS, timestamps, photos, contact attempts,
@@ -124,7 +150,7 @@ export default function Terms() {
             administrative review.
           </p>
 
-          <h3>7. Customer Responsibilities</h3>
+          <h3>8. Customer Responsibilities</h3>
           <p>
             Customers must provide an accurate name, active contact details,
             delivery address, pinned location, payment information, and
@@ -141,28 +167,29 @@ export default function Terms() {
             with available evidence.
           </p>
 
-          <h3>8. Listings, Orders, Prices, and Promotions</h3>
+          <h3>9. Listings, Orders, Prices, and Promotions</h3>
           <p>
-            Listings are supplied or managed by participating
-            dealers/retailers. An order is a request to purchase and becomes
+            Listings are supplied or managed by participating merchants. An
+            order is a request to purchase and becomes
             subject to fulfillment when accepted by the selected store. A
-            dealer/retailer may reject or cancel an order for lawful reasons,
+            merchant may reject or cancel an order for lawful reasons,
             including stock unavailability, unsafe conditions, service-area
             limits, inability to verify an exchange cylinder, or pricing error.
           </p>
           <p>
-            Prices may vary by dealer/retailer, brand, cylinder size, order type,
+            Prices may vary by merchant, brand, cylinder size, order type,
             location, stock, and promotion. Vouchers, VIP pricing, and other
             discounts are subject to displayed eligibility, validity, store,
             usage, and abuse-prevention rules. An optional rider tip is voluntary
             and is shown before confirmation.
           </p>
 
-          <h3>9. Configurable Platform Fees</h3>
+          <h3>10. Configurable Platform Fees</h3>
           <p>
             Customer service fees, COD fees, online payment fees,
-            dealer/retailer transaction fees, SCC purchase fees, payout
-            processing charges, and minimum SCC requirements may be configured
+            merchant transaction fees, SCC purchase fees, unused-SCC refund
+            processing charges, subscription fees, and minimum SCC requirements
+            may be configured
             or adjusted by authorized LPG Go administrators. The fees applicable
             to a customer order must be shown before order confirmation. Store
             charges and deductions are shown in the applicable dashboard,
@@ -175,24 +202,37 @@ export default function Terms() {
             transaction.
           </p>
 
-          <h3>10. Store Service Credit (SCC)</h3>
+          <h3>11. Store Service Credit (SCC)</h3>
           <p>
             SCC is a store-side service ledger used for eligible platform fees,
             fee holds, reversals, refund deductions, payout deductions, and
             authorized adjustments. SCC is not a customer account, bank deposit,
-            savings product, electronic money, investment, or interest-bearing
-            balance. SCC cannot be represented as government-insured funds.
+            savings product, electronic money, investment, interest-bearing
+            balance, or general payment account. It is displayed as SCC without
+            a peso symbol, is not transferable between users, and cannot be
+            represented as government-insured funds.
           </p>
           <p>
             LPG Go may require sufficient SCC for specified store actions.
-            Dealer/retailer transaction fees may be held when an order is marked
-            Delivered, finalized after the order is Completed and the configured
-            replacement window has passed, or reversed for an eligible
-            return/refund before finalization. The store is responsible for
+            The merchant transaction fee is normally reserved from SCC when the
+            merchant approves an order. Delivery provides a server-side backstop
+            for older orders without a reserve. The reserve becomes final after
+            the order is Completed and the configured replacement window has
+            passed, and it is returned after cancellation or an eligible full
+            return/refund before finalization. The merchant is responsible for
             reviewing its ledger and promptly reporting discrepancies.
           </p>
+          <p>
+            A merchant may request a refund of eligible unused SCC through the
+            app. The requested amount is reserved during review; a configurable
+            processing fee may be deducted from an approved refund, and a
+            rejected request restores the reserved SCC. This is a limited
+            contractual refund process, not a user cash-out, remittance, or
+            withdrawal service. LPG Go may require identity, bank, security PIN,
+            and ownership verification before processing.
+          </p>
 
-          <h3>11. Payments</h3>
+          <h3>12. Payments</h3>
           <p>
             LPG Go may support Cash on Delivery and, when enabled for an approved
             store, PayMongo QR Ph or another supported online payment method.
@@ -208,7 +248,35 @@ export default function Terms() {
             bypass the app to evade fees or evidence requirements.
           </p>
 
-          <h3>12. Delivery, Tracking, and Evidence</h3>
+          <h3>13. Store-Approved Credit Orders</h3>
+          <p>
+            A Credit Order is available only when the selected merchant has
+            enabled credit for that specific customer. The customer does not pay
+            cash during delivery, and the order is recorded as On Credit. The
+            merchant must approve the customer and assumes the commercial risk
+            of extending credit.
+          </p>
+          <p>
+            LPG Go is not the lender, does not guarantee repayment, does not set
+            a customer&apos;s credit limit, and does not operate a government credit
+            registry. Any repayment schedule, collection, interest, penalty, or
+            security arrangement must be lawful, clearly agreed between the
+            merchant and customer, and must not be attributed to LPG Go unless
+            an LPG Go screen expressly provides it.
+          </p>
+
+          <h3>14. Merchant Plans and Feature Access</h3>
+          <p>
+            Merchant tools may be grouped into Basic, Business, and Pro plans.
+            Basic access may be free; paid access may renew monthly; completed
+            online and walk-in order milestones may unlock features for the
+            current billing period; and authorized administrators may grant,
+            restrict, or override specific features for support or promotions.
+            Current price, included tools, billing period, renewal, and expiry
+            information shown before activation control the subscription.
+          </p>
+
+          <h3>15. Delivery, Tracking, Re-dispatch, and Evidence</h3>
           <p>
             Delivery estimates are informational and may change because of
             stock, rider availability, traffic, weather, signal, safety events,
@@ -223,8 +291,31 @@ export default function Terms() {
             dispute review. A single record does not necessarily decide fault;
             the combined evidence and responses of the parties may be reviewed.
           </p>
+          <p>
+            If a rider reports a delivery issue after pickup, an administrator
+            may approve cancellation or return the order to Waiting so the
+            merchant can re-dispatch it. The final courier&apos;s name, role, and ID
+            are frozen when delivery is recorded so a later assignment change
+            does not rewrite the delivery record.
+          </p>
 
-          <h3>13. Cancellations, Returns, Replacements, and Refunds</h3>
+          <h3>16. Cylinder Credit and Return Records</h3>
+          <p>
+            The app may track cylinders delivered to and still held by a
+            customer. A customer may request return of an eligible cylinder
+            without a new purchase. The request uses the original order address,
+            requires a clear cylinder photo, and remains pending until the
+            merchant physically receives and approves the return. Approval
+            updates the merchant&apos;s empty-cylinder and customer-cylinder records.
+          </p>
+          <p>
+            Merchants may separately record cylinders from walk-in, telephone,
+            Messenger, or other outside-app transactions. These entries are
+            merchant-provided operational records and are not proof that LPG Go
+            processed, verified, or guaranteed the underlying outside-app sale.
+          </p>
+
+          <h3>17. Cancellations, Returns, Replacements, and Refunds</h3>
           <p>
             Available actions depend on order status. A customer may cancel
             before acceptance when permitted. After acceptance or pickup,
@@ -246,7 +337,7 @@ export default function Terms() {
             consumer remedy.
           </p>
 
-          <h3>14. Safety, Recalls, and Regulatory Cooperation</h3>
+          <h3>18. Safety, Recalls, and Regulatory Cooperation</h3>
           <p>
             Users must follow safe LPG handling guidance and lawful emergency
             instructions. Do not accept or use a cylinder that appears to leak
@@ -256,13 +347,13 @@ export default function Terms() {
           <p>
             LPG Go may issue notices, restrict listings, preserve records,
             coordinate retrieval, suspend accounts, or cooperate with a
-            dealer/retailer, brand owner, insurer, emergency responder, DOE, BFP,
+            merchant, brand owner, insurer, emergency responder, DOE, BFP,
             DTI, LGU, law-enforcement body, court, or other competent authority
             in connection with a safety issue, recall, inspection, or lawful
             investigation.
           </p>
 
-          <h3>15. Complaints, Disputes, and Fair Review</h3>
+          <h3>19. Complaints, Disputes, and Fair Review</h3>
           <p>
             Each party must provide truthful, relevant evidence and a reasonable
             opportunity for the other party to respond. LPG Go may use automated
@@ -278,7 +369,7 @@ export default function Terms() {
             DTI, DOE, NPC, BFP, law enforcement, or a court.
           </p>
 
-          <h3>16. Prohibited Conduct</h3>
+          <h3>20. Prohibited Conduct</h3>
           <ul>
             <li>false identity, permits, brand authority, listings, prices, stock, reviews, receipts, payment proof, or evidence;</li>
             <li>sale, refill, decanting, transport, exchange, or delivery of unlawful, counterfeit, unsafe, stolen, underfilled, or unauthorized LPG products;</li>
@@ -288,7 +379,31 @@ export default function Terms() {
             <li>moving a recorded order or settlement off-app to hide the transaction or avoid obligations.</li>
           </ul>
 
-          <h3>17. Suspension, Restrictions, and Termination</h3>
+          <h3>21. Record Retention, Legal Holds, and Evidence Preservation</h3>
+          <p>
+            LPG Go, merchants, riders, and users agree that order records,
+            payment metadata, SCC ledger entries, admin fee records, Credit
+            Order records, cylinder custody records, delivery evidence,
+            communications, permits, support notes, refund decisions, return or
+            replacement files, fraud flags, and safety reports may be retained
+            as described in the Privacy Policy when reasonably necessary for
+            service operation, tax and accounting records, regulatory
+            compliance, audit, dispute resolution, safety, fraud prevention, or
+            the establishment, exercise, or defense of legal claims.
+          </p>
+          <p>
+            A deletion, account closure, merchant termination, rider removal, or
+            off-app settlement does not remove records that LPG Go or an
+            independent merchant may lawfully keep for an active order, unpaid
+            obligation, SCC discrepancy, Credit Order, cylinder return,
+            chargeback, refund, safety issue, investigation, legal hold, or
+            mandatory recordkeeping period. LPG Go may restrict access to older
+            records instead of deleting them when preservation is required to
+            protect customers, merchants, riders, administrators, regulators, or
+            the platform.
+          </p>
+
+          <h3>22. Suspension, Restrictions, and Termination</h3>
           <p>
             LPG Go may reject an application or restrict, suspend, deactivate,
             or terminate an account, store, brand listing, rider access, COD
@@ -305,7 +420,7 @@ export default function Terms() {
             record-retention obligations.
           </p>
 
-          <h3>18. Platform Availability and Third-Party Services</h3>
+          <h3>23. Platform Availability and Third-Party Services</h3>
           <p>
             LPG Go may depend on Firebase, mapping and location services,
             notification providers, device platforms, internet networks,
@@ -316,7 +431,7 @@ export default function Terms() {
             obligations.
           </p>
 
-          <h3>19. Intellectual Property and User Content</h3>
+          <h3>24. Intellectual Property and User Content</h3>
           <p>
             LPG Go software, interface, brand, design, and original content are
             owned by or licensed to LPG Go and may not be copied or commercially
@@ -333,12 +448,12 @@ export default function Terms() {
             personal data about others.
           </p>
 
-          <h3>20. Disclaimers and Limitation of Liability</h3>
+          <h3>25. Disclaimers and Limitation of Liability</h3>
           <p>
             To the maximum extent permitted by law, LPG Go does not guarantee
             uninterrupted service, exact GPS, inventory, delivery time, merchant
             performance, or defect-free third-party products. LPG Go is not
-            responsible for a dealer/retailer&apos;s product or rider conduct
+            responsible for a merchant&apos;s product or rider conduct
             merely because the transaction used the platform.
           </p>
           <p>
@@ -352,7 +467,7 @@ export default function Terms() {
             direct and reasonably foreseeable result of LPG Go&apos;s own breach.
           </p>
 
-          <h3>21. Indemnity</h3>
+          <h3>26. Indemnity</h3>
           <p>
             To the extent permitted by law, a user must defend, indemnify, and
             hold LPG Go and its personnel harmless from third-party claims,
@@ -364,7 +479,7 @@ export default function Terms() {
             negligence, or non-waivable responsibility.
           </p>
 
-          <h3>22. Governing Law and Dispute Resolution</h3>
+          <h3>27. Governing Law and Dispute Resolution</h3>
           <p>
             These Terms are governed by the laws of the Republic of the
             Philippines. Before filing a private claim, the parties should first
@@ -380,7 +495,7 @@ export default function Terms() {
             or procedure is subject to mandatory consumer and procedural law.
           </p>
 
-          <h3>23. Changes and General Provisions</h3>
+          <h3>28. Changes and General Provisions</h3>
           <p>
             LPG Go may update these Terms for legal, security, operational, or
             service changes. Material changes will be posted with a new
@@ -398,7 +513,7 @@ export default function Terms() {
             assign an account or obligation without consent.
           </p>
 
-          <h3>24. Official Legal References</h3>
+          <h3>29. Official Legal References</h3>
           <ul>
             <li>
               <a href="https://lawphil.net/statutes/repacts/ra2021/ra_11592_2021.html" target="_blank" rel="noopener noreferrer">
@@ -432,12 +547,12 @@ export default function Terms() {
             </li>
           </ul>
 
-          <h3>25. Contact</h3>
+          <h3>30. Contact</h3>
           <p>
             For order or account concerns, use the in-app Support Feedback
             feature or email <a href={`mailto:${site.email}`}>{site.email}</a>.
-            For privacy requests, email{" "}
-            <a href="mailto:dpo@lpggo.ph">dpo@lpggo.ph</a>. Safety emergencies
+            For privacy requests, use the same address with the subject
+            &quot;Privacy Request.&quot; Safety emergencies
             should be directed first to local emergency responders when it is
             unsafe to remain at the location.
           </p>

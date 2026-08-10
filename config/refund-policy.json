@@ -1,6 +1,7 @@
 {
   "config_name": "lpggo_return_refund_policy",
-  "version": "2.0.0",
+  "version": "3.0.0",
+  "effective_date": "2026-08-10",
   "currency": "PHP",
   "return_action_windows": {
     "delivered_full_refund_minutes": 30,
@@ -12,8 +13,9 @@
     "source": "SUPERADMIN_SETTINGS",
     "adjustable": true,
     "displayed_before_customer_confirmation": true,
-    "held_on_status": "DELIVERED",
-    "finalized_after_status": "COMPLETED",
+    "held_on_status": "MERCHANT_APPROVAL",
+    "delivery_hold_backstop": true,
+    "finalized_after_status": "COMPLETED_PLUS_REPLACEMENT_WINDOW",
     "replacement_window_minutes": 60,
     "reversed_on_eligible_full_return_refund": true
   },
@@ -156,7 +158,7 @@
       "fault_party": "CUSTOMER",
       "claim_window_hours": 0,
       "evidence_required": false,
-      "allowed_resolutions": ["DENIED_NOT_COVERED", "DEALER_RETAILER_GOODWILL_OPTIONAL"],
+      "allowed_resolutions": ["DENIED_NOT_COVERED", "MERCHANT_GOODWILL_OPTIONAL"],
       "default_resolution": "DENIED_NOT_COVERED"
     },
     {
@@ -180,7 +182,8 @@
     "after_acceptance_or_pickup": {
       "allowed": "REVIEW_REQUIRED",
       "reason_and_evidence_required": true,
-      "possible_delivery_or_cancellation_charge": "AS_DISPLAYED_OR_APPROVED"
+      "possible_delivery_or_cancellation_charge": "AS_DISPLAYED_OR_APPROVED",
+      "admin_outcomes": ["CANCEL", "RETURN_TO_WAITING_FOR_REDISPATCH"]
     },
     "after_completed_delivery": {
       "allowed": false,
@@ -216,13 +219,13 @@
     {
       "payment_method": "ONLINE",
       "escrow_state": "RELEASED",
-      "funding_source": "DEALER_RETAILER_SETTLEMENT_OR_SCC",
+      "funding_source": "MERCHANT_SETTLEMENT_OR_SCC",
       "fallback": "FUTURE_PAYOUT_DEDUCTION"
     },
     {
       "payment_method": "COD",
-      "funding_source": "DEALER_RETAILER_CASH_ON_RETRIEVAL",
-      "fallback": "DEALER_RETAILER_SCC_DEDUCTION"
+      "funding_source": "MERCHANT_CASH_ON_RETRIEVAL",
+      "fallback": "MERCHANT_SCC_DEDUCTION"
     },
     {
       "payment_method": "ANY",
@@ -248,7 +251,7 @@
   ],
   "cash_refund_dual_confirmation": {
     "enabled": true,
-    "dealer_retailer_action": "MARK_REFUND_ISSUED",
+    "merchant_action": "MARK_REFUND_ISSUED",
     "customer_action": "CONFIRM_RECEIVED",
     "confirmation_methods": ["IN_APP_TAP", "QR_SCAN", "PHOTO_RECEIPT"],
     "customer_confirmation_timeout_hours": 24,
@@ -256,12 +259,23 @@
   },
   "store_service_credit": {
     "purpose": "STORE_SIDE_SERVICE_LEDGER",
+    "display_unit": "SSC_WITHOUT_CURRENCY_SYMBOL",
     "not_customer_money": true,
     "not_bank_deposit": true,
     "not_electronic_money": true,
+    "not_general_payment_account": true,
+    "non_transferable_between_users": true,
+    "server_controlled_mutations": true,
     "minimum_requirement_source": "SUPERADMIN_SETTINGS",
     "fees_adjustable": true,
-    "negative_balance_action": "RESTRICT_ELIGIBLE_STORE_ACTIONS",
+    "insufficient_balance_action": "CLOSE_OR_RESTRICT_STORE_UNTIL_REQUIREMENT_IS_MET",
+    "unused_credit_refund": {
+      "request_required": true,
+      "admin_review_required": true,
+      "processing_fee_source": "SUPERADMIN_SETTINGS",
+      "rejected_request_restores_reserved_credit": true,
+      "not_user_cashout_or_transfer": true
+    },
     "ledger_entry_types": [
       "PURCHASE",
       "FEE_HOLD",
@@ -273,10 +287,46 @@
     ]
   },
   "fee_lifecycle": {
-    "hold_at_delivered": true,
+    "hold_at_merchant_approval": true,
+    "hold_at_delivery_only_as_backstop": true,
     "finalize_after_completed_replacement_window": true,
     "replacement_window_minutes": 60,
     "reverse_for_eligible_return_refund_before_finalization": true
+  },
+  "credit_orders": {
+    "availability": "STORE_SPECIFIC_MERCHANT_APPROVAL",
+    "customer_cash_due_at_delivery": false,
+    "payment_status": "ON_CREDIT",
+    "merchant_must_confirm_eligibility_before_approval": true,
+    "lpg_go_is_not_lender": true,
+    "repayment_terms_are_between_customer_and_merchant": true,
+    "platform_record_is_not_a_government_credit_registry": true
+  },
+  "cylinder_credit_returns": {
+    "purpose": "TRACK_CYLINDERS_LEFT_WITH_CUSTOMERS",
+    "customer_return_without_new_order_supported": true,
+    "original_order_address_locked": true,
+    "customer_photo_required": true,
+    "photo_max_size_mb": 5,
+    "merchant_physical_receipt_confirmation_required": true,
+    "pending_request_blocks_duplicate_return": true,
+    "outside_app_records_are_merchant_entered": true,
+    "outside_app_records_are_not_platform_verified_sales": true
+  },
+  "delivery_review": {
+    "failed_delivery_after_pickup_requires_reason_and_evidence": true,
+    "admin_may_cancel_or_redispatch": true,
+    "customer_and_merchant_notifications": true,
+    "final_courier_identity_frozen_at_delivery": true,
+    "gps_is_supporting_not_conclusive_evidence": true
+  },
+  "merchant_plans": {
+    "plans": ["BASIC", "BUSINESS", "PRO"],
+    "basic_is_free": true,
+    "paid_plans_are_monthly": true,
+    "completed_order_milestones_may_unlock_features": true,
+    "admin_overrides_and_custom_permissions_supported": true,
+    "prices_and_features_may_change_with_notice": true
   },
   "service_targets_hours": {
     "general_first_response": 24,
@@ -289,7 +339,7 @@
     "customer": {
       "repeat_or_inconsistent_claims": "MANUAL_REVIEW_OR_RESTRICTION"
     },
-    "dealer_retailer_and_rider": {
+    "merchant_and_rider": {
       "repeat_failed_delivery_or_fault_patterns": "MANUAL_REVIEW_OR_RESTRICTION",
       "safety_violation_immediate_review": true
     },

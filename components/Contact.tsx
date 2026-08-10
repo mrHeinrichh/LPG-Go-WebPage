@@ -85,7 +85,7 @@ export default function Contact() {
               </svg>
             </div>
             <div>
-              <h4>Become a dealer/retailer</h4>
+              <h4>Become a merchant</h4>
               <p>
                 Want to sell through LPG Go? Email us for onboarding
                 requirements and application support.

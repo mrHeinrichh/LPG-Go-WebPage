@@ -8,7 +8,7 @@ export const site = {
   name: "LPG Go",
   tagline: "LPG marketplace and delivery coordination in the Philippines",
   description:
-    "LPG Go is a marketplace platform that connects customers with independent LPG dealers/retailers and delivery riders. We help facilitate orders, delivery coordination, and payments, while LPG products are sold and fulfilled by participating dealers/retailers.",
+    "LPG Go is a marketplace platform that connects customers with independent LPG merchants (participating dealers/retailers) and delivery riders. We facilitate store discovery, orders, delivery coordination, available payment methods, and support, while LPG products are sold and fulfilled by participating merchants.",
   url: "https://lpg-go.vercel.app",
   email: "lpggo.philippines@gmail.com",
   locale: "en_PH",
@@ -37,10 +37,10 @@ export const social = {
 // ---------------------------------------------------------------------------
 export const screenshots = [
   { src: "/screenshots/1.png", title: "Delivered to your door", caption: "On-demand LPG gas brought straight to your home." },
-  { src: "/screenshots/2.png", title: "Pick a nearby store", caption: "Choose a participating dealer/retailer, brand, and tank size." },
+  { src: "/screenshots/2.png", title: "Pick a nearby store", caption: "Choose a participating merchant, brand, and tank size." },
   { src: "/screenshots/3.png", title: "Track your rider", caption: "Follow your delivery live on the map in real time." },
   { src: "/screenshots/4.png", title: "Scan to order", caption: "Scan a store's QR to order again in seconds." },
-  { src: "/screenshots/5.png", title: "Review payment options", caption: "Use Cash on Delivery or a supported online option when available." },
+  { src: "/screenshots/5.png", title: "Review payment options", caption: "Use COD, an enabled online method, or a merchant-approved Credit Order when shown." },
   { src: "/screenshots/6.png", title: "All your orders", caption: "Every order, status, and receipt in one place." },
 ] as const;
 
@@ -159,16 +159,16 @@ export const navLinks = [
   { href: "/#how", label: "How it works" },
   { href: "/safety", label: "Safety" },
   { href: "/#features", label: "Features" },
-  { href: "/#partners", label: "Dealers/Retailers & Riders" },
+  { href: "/#partners", label: "Merchants & Riders" },
   { href: "/policy/refund-policy", label: "Policies" },
   { href: "/#faq", label: "FAQ" },
 ];
 
 export const coverageAreas = [
-  "Nearby participating dealers/retailers",
+  "Nearby participating merchants",
   "Metro Manila-ready",
   "Province expansion",
-  "Dealer/retailer-led delivery zones",
+  "Merchant-led delivery zones",
 ] as const;
 
 export const testimonials = [
@@ -179,14 +179,14 @@ export const testimonials = [
       "The app makes it easier to see the order status, selected store, price, and available delivery updates.",
   },
   {
-    name: "Local dealer/retailer",
+    name: "Local LPG merchant",
     role: "Participating LPG seller",
     quote:
-      "Orders, riders, products, vouchers, and Store Service Credit (SCC) activity can be managed from one dashboard.",
+      "Orders, riders, products, cylinders, Credit Orders, vouchers, plans, and SCC activity can be managed from one dashboard.",
   },
   {
     name: "Delivery rider",
-    role: "Dealer/retailer rider",
+    role: "Merchant-managed rider",
     quote:
       "The pickup, drop-off, proof photo, and customer contact flow make delivery coordination clearer.",
   },

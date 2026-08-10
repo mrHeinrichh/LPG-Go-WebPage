@@ -8,7 +8,7 @@ export default function Screenshots() {
           <span className="eyebrow reveal">See it in action</span>
           <h2 className="title reveal d1">A closer look at the app</h2>
           <p className="lead reveal d2">
-            From finding a nearby dealer/retailer to tracking your rider and
+            From finding a nearby merchant to tracking your rider and
             reviewing payment options, here is how LPG Go looks on your phone.
           </p>
         </div>

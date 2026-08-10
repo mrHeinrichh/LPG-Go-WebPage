@@ -10,14 +10,15 @@ export default function Privacy() {
         </div>
         <div className="doc reveal d1">
           <p className="updated">
-            Effective and last updated: July 26, 2026
+            Effective and last updated: August 10, 2026
           </p>
           <p>
             This Privacy Policy explains how LPG Go collects, uses, stores,
             shares, protects, and disposes of personal data through the website,
             mobile application, customer and store accounts, rider tools,
-            ordering, delivery coordination, payments, Store Service Credit,
-            support, safety, and dispute processes. It is intended to comply with
+            ordering, delivery coordination, payments, merchant subscriptions,
+            store-approved Credit Orders, cylinder-credit returns, Store Service
+            Credit, support, safety, and dispute processes. It is intended to comply with
             Republic Act No. 10173, the Data Privacy Act of 2012, its
             implementing rules, and applicable National Privacy Commission
             issuances.
@@ -27,25 +28,27 @@ export default function Privacy() {
           <p>
             The LPG Go service operator acts as personal information controller
             for data it determines how and why to process. Participating
-            dealers/retailers may also act as independent personal information
-            controllers for their own sales, receipts, tax, employee, rider,
+            merchants (participating LPG dealers/retailers) may also act as
+            independent personal information controllers for their own sales,
+            receipts, tax, employee, rider,
             customer-service, warranty, and legal records. Service providers
             process data under their own terms or on documented instructions,
             depending on their role.
           </p>
           <p>
-            Questions or rights requests may be sent to the Data Protection
-            Officer at <a href="mailto:dpo@lpggo.ph">dpo@lpggo.ph</a> or to{" "}
-            <a href={`mailto:${site.email}`}>{site.email}</a>.
+            Questions or rights requests may be sent to the LPG Go privacy
+            contact at <a href={`mailto:${site.email}`}>{site.email}</a> with
+            the subject &quot;Privacy Request.&quot;
           </p>
 
           <h3>2. Personal Data We Collect</h3>
           <ul>
             <li><b>Account and identity data:</b> name, email, phone number, user ID, profile photo, role, login and verification records.</li>
             <li><b>Address and location data:</b> delivery address, map pin, coordinates, service area, route, rider location during active work, and location timestamps.</li>
-            <li><b>Order and marketplace data:</b> selected store, products, brand, size, order type, quantity, prices, discounts, fees, tip, status history, receipts, ratings, favorites, and order communications.</li>
-            <li><b>Dealer/retailer data:</b> owner or representative details, business name, address, permits, registrations, DOE and brand documents, expiration dates, product catalog, store settings, rider roster, payout details, and SCC ledger records.</li>
+            <li><b>Order and marketplace data:</b> selected store, products, brand, size, order type, quantity, prices, discounts, fees, tip, payment method, Credit Order eligibility and status, status history, receipts, ratings, favorites, and order communications.</li>
+            <li><b>Merchant data:</b> owner or representative details, business name, address, permits, registrations, DOE and brand documents, expiration dates, product catalog, store settings, rider roster, subscription and feature permissions, payout details, and SCC ledger records.</li>
             <li><b>Rider data:</b> identity and contact details, assigned store, vehicle details when applicable, availability, order assignments, status actions, GPS, photos, and delivery performance records.</li>
+            <li><b>Cylinder and inventory data:</b> original order, brand, size, quantity, filled, empty, with-customer status, return address, return photo, preferred return time, merchant approval, and merchant-entered outside-app references.</li>
             <li><b>Payment data:</b> method, amount, transaction or reference ID, payment status, provider response, refund status, payout data, and limited bank or e-wallet account details needed for an approved settlement.</li>
             <li><b>Support, safety, and evidence data:</b> complaint reason, written description, photos, video, receipts, weight information, pickup and delivery proof, contact attempts, messages, resolution, and administrative notes.</li>
             <li><b>Device and technical data:</b> device model, operating system, app version, IP address, notification token, logs, crashes, authentication events, security signals, and feature activity.</li>
@@ -58,9 +61,9 @@ export default function Privacy() {
             person.
           </p>
 
-          <h3>3. Dealer/Retailer Compliance and Sensitive Data</h3>
+          <h3>3. Merchant Compliance and Sensitive Data</h3>
           <p>
-            Dealer/retailer onboarding may require government-issued
+            Merchant onboarding may require government-issued
             identification, permits, registration records, tax-related
             documents, signatures, and other information that may qualify as
             sensitive personal information. We process these records for
@@ -69,7 +72,7 @@ export default function Privacy() {
             providers with a need to know.
           </p>
           <p>
-            Dealers/retailers must have a lawful basis before uploading personal
+            Merchants must have a lawful basis before uploading personal
             data of owners, representatives, employees, or riders and must give
             them any notice required by law. Public business information and
             store listings are treated separately from private identity and
@@ -88,7 +91,8 @@ export default function Privacy() {
           <p>
             Camera and media access may be used for profile photos, permits,
             product listings, pickup and delivery evidence, failed-delivery
-            evidence, returns, safety reports, and dispute resolution.
+            evidence, cylinder-return verification, returns, safety reports, and
+            dispute resolution.
             Notification permission enables order, security, support, document,
             and service messages. Device permissions can be changed in system
             settings, but disabling one may limit a related feature.
@@ -97,8 +101,9 @@ export default function Privacy() {
           <h3>5. Why We Process Personal Data</h3>
           <ul>
             <li>create and secure accounts, verify identity, roles, stores, permits, and brand authority;</li>
-            <li>show nearby stores, process orders, coordinate riders, display status, and provide customer support;</li>
-            <li>calculate totals, configurable fees, discounts, tips, SCC entries, payouts, payments, reversals, and refunds;</li>
+            <li>show nearby stores, process orders, coordinate riders and re-dispatch, display status, and provide customer support;</li>
+            <li>administer merchant plans, feature permissions, store-approved Credit Orders, cylinder balances, and return requests;</li>
+            <li>calculate totals, configurable fees, discounts, tips, SCC entries, unused-SCC refund requests, payouts, payments, reversals, and refunds;</li>
             <li>inspect safety concerns, investigate disputes, prevent fraud and abuse, and enforce the Terms;</li>
             <li>send transactional, security, legal, safety, and service notices;</li>
             <li>maintain records, analytics, debugging, service quality, availability, and feature improvement;</li>
@@ -126,8 +131,9 @@ export default function Privacy() {
           <h3>7. Automated Controls and Human Review</h3>
           <p>
             LPG Go may automatically calculate fees, distance, store
-            availability, order eligibility, action windows, status deadlines,
-            SCC holds, and risk flags. Indicators may include inconsistent GPS,
+            availability, Credit Order eligibility, subscription and feature
+            access, cylinder balances, action windows, status deadlines, SCC
+            holds, and risk flags. Indicators may include inconsistent GPS,
             unusual account activity, repeated complaints, repeated failed
             deliveries, document expiration, or payment mismatch.
           </p>
@@ -142,7 +148,7 @@ export default function Privacy() {
           <h3>8. Who Receives Personal Data</h3>
           <p>We may disclose relevant data to:</p>
           <ul>
-            <li>the selected dealer/retailer and assigned rider for order preparation, delivery, support, return, and legal obligations;</li>
+            <li>the selected merchant and assigned or re-dispatched rider for order preparation, delivery, cylinder return, support, and legal obligations;</li>
             <li>Firebase or other cloud, database, authentication, storage, notification, analytics, and security providers;</li>
             <li>Google Maps Platform or another mapping, places, geocoding, routing, and location provider;</li>
             <li>PayMongo, banks, e-wallets, payout providers, or payment partners when an online payment, refund, verification, or payout feature is enabled;</li>
@@ -160,7 +166,7 @@ export default function Privacy() {
           <p>
             Approved store name, location, operating status, service area,
             product listing, prices, ratings, and business contact information
-            may be visible to users. Dealer/retailer permits or verification
+            may be visible to users. Merchant permits or verification
             status may be summarized without displaying private identity
             numbers or full documents. Public reviews and profile content may be
             associated with an account according to the interface shown when
@@ -181,25 +187,54 @@ export default function Privacy() {
             Cash on Delivery records may include the amount due, collection
             confirmation, receipt, and refund handback evidence.
           </p>
-
-          <h3>11. Retention and Account Deletion</h3>
           <p>
-            Personal data is retained only for as long as reasonably necessary
-            for the purpose collected, account operation, transaction and tax
-            records, warranty and consumer claims, safety and recall records,
-            fraud prevention, audit, backup integrity, legal compliance, and the
-            establishment, exercise, or defense of claims. Different categories
-            have different retention periods.
+            A store-approved Credit Order records a merchant-specific commercial
+            arrangement and related order status. LPG Go does not publish it as
+            a consumer credit score or submit it to a credit registry through the
+            current feature.
+          </p>
+
+          <h3>11. Data Retention Policy and Account Deletion</h3>
+          <p>
+            LPG Go retains personal data only for as long as necessary for the
+            declared purpose, service operation, legal compliance, legitimate
+            business records, fraud prevention, safety, audit, and the
+            establishment, exercise, or defense of legal claims. Retention is
+            applied by data category, order status, open obligations, legal
+            hold, dispute status, regulatory requirement, and technical backup
+            cycle. When data is no longer needed, LPG Go may delete,
+            de-identify, anonymize, archive, restrict access to, or securely
+            dispose of the record.
+          </p>
+          <ul>
+            <li><b>Account and profile records:</b> kept while the account is active and for a reasonable period after closure when needed for security, fraud prevention, dispute handling, legal claims, or audit history.</li>
+            <li><b>Orders, receipts, payment metadata, refunds, payouts, SCC ledger entries, and admin fee records:</b> kept for transaction proof, accounting, tax, audit, dispute, refund, chargeback, and legal-defense purposes, including any period required for books of accounts and supporting records under applicable tax rules.</li>
+            <li><b>Delivery GPS, rider status, pickup photos, delivery photos, failed-delivery evidence, messages, timestamps, and support notes:</b> kept while needed to complete the order, investigate a report, protect customers, merchants, riders, and LPG Go, prevent abuse, or respond to a safety, refund, return, replacement, or legal issue.</li>
+            <li><b>Credit Order records:</b> kept while the customer has open merchant-approved credit activity and afterward as needed for merchant collection records, dispute review, audit, tax, and legal-defense purposes. LPG Go does not treat the current Credit Order feature as a customer credit score or public credit registry.</li>
+            <li><b>Cylinder custody and return records:</b> kept while a cylinder balance, return request, merchant approval, outside-app reference, or related dispute remains open, and afterward as needed for inventory, warranty, audit, safety, and legal proof.</li>
+            <li><b>Merchant onboarding, permits, licenses, brand authority, plan, rider roster, and compliance documents:</b> kept while the merchant is active and afterward as needed for legal compliance, verification history, regulatory inquiry, fraud prevention, tax, audit, and claims.</li>
+            <li><b>Safety, leak, recall, abuse, fraud, and incident records:</b> may be retained longer when reasonably necessary to protect life, health, property, users, the platform, or the public, or to cooperate with insurers, brand owners, emergency responders, regulators, law enforcement, or courts.</li>
+            <li><b>Website logs, device logs, security logs, and backup records:</b> kept for limited operational, debugging, security, incident-response, and backup-integrity purposes unless a longer period is required by an investigation, legal hold, or system recovery need.</li>
+            <li><b>Marketing and optional communications data:</b> kept until consent is withdrawn, the user opts out where applicable, or the campaign or lawful business purpose ends, unless another lawful basis requires continued retention.</li>
+          </ul>
+          <p>
+            An account-deletion request removes, restricts, or de-identifies
+            data that is no longer needed, subject to identity verification and
+            lawful exceptions. LPG Go may deny, delay, or limit deletion when a
+            record is still needed for active orders, unpaid obligations,
+            Credit Orders, SCC entries, cylinder custody, refunds, chargebacks,
+            return or replacement claims, safety investigations, fraud review,
+            tax or accounting records, regulatory requirements, legal holds, or
+            the rights and defenses of LPG Go, a merchant, rider, customer, or
+            another person.
           </p>
           <p>
-            An account-deletion request removes or de-identifies data that is no
-            longer needed, subject to identity verification and lawful
-            exceptions. Deletion may be delayed for active orders, unresolved
-            disputes, unpaid obligations, safety investigations, legal holds,
-            regulatory requirements, or technically isolated backups that are
-            later overwritten under the backup cycle. Deletion of an LPG Go
-            account does not automatically delete records independently held by
-            a dealer/retailer or payment provider.
+            Deletion of an LPG Go account does not automatically delete records
+            independently held by a merchant, rider, payment provider, bank,
+            e-wallet, app store, map provider, regulator, or another
+            independent controller for its own lawful purposes. Technically
+            isolated backups may also remain until overwritten under the normal
+            backup cycle, with access restricted unless restoration is required.
           </p>
 
           <h3>12. Security and Personal Data Breaches</h3>
@@ -258,6 +293,7 @@ export default function Privacy() {
             <li>update available profile, address, store, and notification settings in the app;</li>
             <li>enable or disable location, camera, media, and notification permissions through device settings;</li>
             <li>choose whether to provide an optional rider tip, review, or non-essential profile content;</li>
+            <li>ask a merchant to grant or remove future Credit Order permission, subject to open obligations and lawful record retention;</li>
             <li>opt out of direct marketing where offered, while continuing to receive necessary transaction, safety, security, and legal notices; and</li>
             <li>request account deletion or contact the DPO about a privacy right.</li>
           </ul>
@@ -269,7 +305,7 @@ export default function Privacy() {
             do not knowingly request a child&apos;s account for independent LPG
             ordering. If a parent or guardian believes a child supplied personal
             data without proper authority, the parent or guardian should contact
-            the DPO so the circumstances can be reviewed.
+            the privacy contact so the circumstances can be reviewed.
           </p>
 
           <h3>17. Website Logs, Links, and Future Features</h3>
@@ -299,12 +335,12 @@ export default function Privacy() {
           <h3>19. Contact and Complaints</h3>
           <p>
             For privacy questions, requests, or complaints, contact the Data
-            Protection Officer at{" "}
-            <a href="mailto:dpo@lpggo.ph">dpo@lpggo.ph</a>. General account and
-            order support is available at{" "}
-            <a href={`mailto:${site.email}`}>{site.email}</a> or through in-app
-            Support Feedback. Please do not email passwords, PINs, or
-            unnecessary copies of sensitive documents.
+            Protection Officer through{" "}
+            <a href={`mailto:${site.email}?subject=Privacy%20Request`}>{site.email}</a>{" "}
+            with the subject &quot;Privacy Request.&quot; General account and order
+            support is available through the same address or in-app Support
+            Feedback. Please do not email passwords, PINs, or unnecessary copies
+            of sensitive documents.
           </p>
           <p>
             A data subject who is not satisfied with the response may contact or

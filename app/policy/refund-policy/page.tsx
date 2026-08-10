@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import PolicyLayout from "@/components/PolicyLayout";
+import { refundPolicy } from "@/lib/refund-policy";
 
 export const metadata: Metadata = {
   title: "Return, Replacement, and Refund Policy | LPG Go PH",
@@ -19,6 +20,9 @@ const toc = [
   "Review and Remedies",
   "Refund Processing",
   "Store Service Credit",
+  "Credit Orders",
+  "Cylinder Credit Returns",
+  "Delivery Review",
   "Evidence and Abuse",
   "Service Targets",
 ].map((label) => ({
@@ -27,6 +31,11 @@ const toc = [
 }));
 
 export default function RefundPolicyPage() {
+  const refundMinutes =
+    refundPolicy.return_action_windows.delivered_full_refund_minutes;
+  const replacementMinutes =
+    refundPolicy.return_action_windows.completed_replace_minutes;
+
   return (
     <PolicyLayout
       eyebrow="Policy"
@@ -34,15 +43,18 @@ export default function RefundPolicyPage() {
       lead="How LPG Go handles eligible cancellations, product concerns, failed deliveries, returns, replacements, and refunds for marketplace orders."
       toc={toc}
     >
-      <p className="updated">Effective and last updated: July 26, 2026</p>
+      <p className="updated">
+        Effective and last updated: August 10, 2026 · Policy configuration v
+        {refundPolicy.version}
+      </p>
 
       <section id="overview" className="refund-overview">
         <article>
-          <b>30 min</b>
+          <b>{refundMinutes} min</b>
           <span>Return and Full Refund action after Delivered</span>
         </article>
         <article>
-          <b>1 hour</b>
+          <b>{replacementMinutes} min</b>
           <span>Return and Replace action after Completed</span>
         </article>
         <article>
@@ -59,7 +71,8 @@ export default function RefundPolicyPage() {
         <h2>Important Notice</h2>
         <p>
           LPG Go is a marketplace and coordination platform. Participating
-          dealers/retailers sell and fulfill LPG products. This policy explains
+          merchants (participating LPG dealers/retailers) sell and fulfill LPG
+          products. This policy explains
           the app process and does not remove any non-waivable right or remedy
           available under Philippine law. A visible return, replacement, or
           dispute button permits a request; it does not automatically approve a
@@ -72,10 +85,10 @@ export default function RefundPolicyPage() {
         <p>
           This policy is intended to operate consistently with the Consumer Act
           of the Philippines, applicable DTI rules and guidance, the LPG
-          Industry Regulation Act, the Data Privacy Act, and other mandatory
-          Philippine laws. LPG Go does not apply a blanket &quot;No Return, No
-          Exchange&quot; rule to defective, unsafe, misrepresented, or
-          incorrectly supplied products.
+          Industry Regulation Act, the Internet Transactions Act, the Data
+          Privacy Act, and other mandatory Philippine laws. LPG Go does not
+          apply a blanket &quot;No Return, No Exchange&quot; rule to defective,
+          unsafe, misrepresented, or incorrectly supplied products.
         </p>
         <p>
           Remedies are assessed according to the facts, available evidence,
@@ -88,8 +101,8 @@ export default function RefundPolicyPage() {
       <section id="platform-role" className="policy-section">
         <h2>2. Platform Role and Responsible Seller</h2>
         <p>
-          The participating dealer/retailer is the seller and fulfiller of the
-          LPG product. The dealer/retailer remains responsible for authenticity,
+          The participating merchant is the seller and fulfiller of the LPG
+          product. The merchant remains responsible for authenticity,
           lawful source, correct weight, cylinder condition, seals, stock,
           pricing, receipts, delivery fulfillment, product warranty, and
           after-sales obligations. Riders are responsible for lawful and safe
@@ -106,10 +119,11 @@ export default function RefundPolicyPage() {
       <section id="fees-and-amounts" className="policy-section">
         <h2>3. Configurable Fees and Order Amounts</h2>
         <p>
-          Product prices and delivery charges may vary by dealer/retailer,
+          Product prices and delivery charges may vary by merchant,
           brand, cylinder size, order type, stock, location, and promotion.
           Customer service fees, COD fees, supported online payment fees,
-          dealer/retailer transaction fees, SCC purchase fees, payout charges,
+          merchant transaction fees, SCC purchase fees, unused-SCC refund
+          processing charges,
           and minimum SCC requirements are configurable and may change through
           authorized SuperAdmin settings.
         </p>
@@ -136,8 +150,7 @@ export default function RefundPolicyPage() {
           Change of mind, selecting the wrong product despite clear listing
           information, ordinary cosmetic wear that does not affect safety, or
           damage caused after delivery may be denied unless the
-          dealer/retailer voluntarily grants a remedy or applicable law requires
-          one.
+          merchant voluntarily grants a remedy or applicable law requires one.
         </p>
       </section>
 
@@ -151,7 +164,7 @@ export default function RefundPolicyPage() {
           delivery costs.
         </p>
         <p>
-          After pickup, a rider or dealer/retailer may not use a reschedule or
+          After pickup, a rider or merchant may not use a reschedule or
           failed-delivery status merely to bypass the recorded transaction.
           Likewise, a customer may not deny a completed delivery or falsely
           claim absence. The app may require GPS, timestamp, photo, contact
@@ -163,12 +176,12 @@ export default function RefundPolicyPage() {
         <h2>6. In-App Return and Replacement Windows</h2>
         <ol>
           <li>
-            <b>Return and Full Refund:</b> an eligible action may appear for 30
-            minutes after an order is marked Delivered.
+            <b>Return and Full Refund:</b> an eligible action may appear for{" "}
+            {refundMinutes} minutes after an order is marked Delivered.
           </li>
           <li>
             <b>Return and Replace:</b> an eligible action may appear for one
-            hour after an order is marked Completed.
+            {replacementMinutes} minutes after an order is marked Completed.
           </li>
           <li>
             <b>After expiration:</b> the customer may use Report or Dispute from
@@ -204,7 +217,7 @@ export default function RefundPolicyPage() {
       <section id="review-and-remedies" className="policy-section">
         <h2>8. Review and Available Remedies</h2>
         <p>
-          The dealer/retailer and authorized LPG Go administrators may review
+          The merchant and authorized LPG Go administrators may review
           the order record, listing, status history, GPS data, timestamps,
           pickup and delivery photos, customer and rider communications,
           payment records, prior account patterns, product condition, and any
@@ -225,7 +238,7 @@ export default function RefundPolicyPage() {
         <h2>9. Refund Funding and Processing</h2>
         <p>
           Approved refunds are generally charged to the responsible
-          dealer/retailer through unreleased settlement, SCC deduction, future
+          merchant through unreleased settlement, SCC deduction, future
           payout deduction, cash returned during retrieval, or another lawful
           settlement method. LPG Go may place or preserve a hold while a case is
           reviewed. A platform-funded goodwill payment, when offered, is
@@ -251,20 +264,78 @@ export default function RefundPolicyPage() {
           does not earn interest.
         </p>
         <p>
-          The applicable dealer/retailer transaction fee may be held when an
-          order is marked Delivered. It is finalized after the order is
-          Completed and the one-hour replacement window has passed. An eligible
-          return and full-refund action before finalization may reverse the hold.
-          Amounts and minimum SCC requirements remain adjustable through
-          authorized settings.
+          The applicable merchant transaction fee is normally reserved from SCC
+          when the merchant approves the order. Delivery creates a server-side
+          backstop hold only for a legacy order that reached delivery without an
+          earlier reserve. The reserve becomes final after the order is
+          Completed and the configured replacement window has passed. It is
+          returned when the order is cancelled or enters an eligible full
+          return/refund before finalization. Amounts and minimum SCC requirements
+          remain adjustable through authorized settings and ledger records.
+        </p>
+        <p>
+          SCC is displayed without a peso symbol and is not transferable or
+          usable as a customer payment account. When available, a merchant may
+          request an admin-reviewed refund of eligible unused SCC to a verified
+          owner account. The requested credits remain reserved during review;
+          an approved request may carry the processing charge disclosed in the
+          app, while rejection restores the reserved credits. This is a limited
+          unused-service-credit refund, not a general cashout, remittance, or
+          peer-to-peer transfer feature.
+        </p>
+      </section>
+
+      <section id="credit-orders" className="policy-section">
+        <h2>11. Store-Approved Credit Orders</h2>
+        <p>
+          Credit Order is available only when the selected merchant has enabled
+          it for that specific customer. The customer does not pay cash during
+          delivery, the order is recorded as On Credit, and the merchant must
+          confirm the customer&apos;s eligibility before approval. LPG Go does not
+          extend the loan, set a customer credit limit, guarantee repayment, or
+          act as a credit bureau. Repayment terms and collection remain between
+          the customer and merchant unless a future in-app screen expressly
+          states otherwise.
+        </p>
+      </section>
+
+      <section id="cylinder-credit-returns" className="policy-section">
+        <h2>12. Cylinder Credit and Return Requests</h2>
+        <p>
+          A cylinder-credit return is different from a defective-product refund.
+          The app may record cylinders left with a customer, link each balance to
+          the original completed order, and let the customer request a return
+          without placing a new order. The return address is locked to the
+          original order, a clear cylinder photo is required, and a duplicate
+          request is blocked while one remains pending.
+        </p>
+        <p>
+          A return remains pending until the merchant physically receives and
+          approves the cylinder. Approval updates the store&apos;s empty-cylinder and
+          customer-cylinder records. Merchant-entered records for walk-in,
+          telephone, Messenger, or other outside-app transactions are merchant
+          records; LPG Go does not independently verify that an outside-app sale
+          or handover occurred.
+        </p>
+      </section>
+
+      <section id="delivery-review" className="policy-section">
+        <h2>13. Failed Delivery Review and Re-dispatch</h2>
+        <p>
+          A delivery issue after pickup may be placed under admin review with a
+          reason, photo, timestamp, GPS, contact attempts, and status history.
+          The administrator may approve cancellation or return the order to a
+          waiting state so the merchant can re-dispatch it. The recorded final
+          courier identity is frozen when delivery is confirmed. GPS and a photo
+          support review but neither is automatically conclusive by itself.
         </p>
       </section>
 
       <section id="evidence-and-abuse" className="policy-section">
-        <h2>11. Neutral Evidence and Abuse Prevention</h2>
+        <h2>14. Neutral Evidence and Abuse Prevention</h2>
         <p>
           LPG Go applies the same evidence-based review to customers,
-          dealers/retailers, and riders. Repeated, contradictory, fabricated, or
+          merchants, and riders. Repeated, contradictory, fabricated, or
           manipulated claims may trigger manual review, higher evidence
           requirements, temporary restrictions, suspension, termination,
           recovery of losses, or referral to authorities when appropriate.
@@ -280,7 +351,7 @@ export default function RefundPolicyPage() {
       </section>
 
       <section id="service-targets" className="policy-section">
-        <h2>12. Service Targets and Cooperation</h2>
+        <h2>15. Service Targets and Cooperation</h2>
         <p>
           Safety reports are prioritized. Other requests are handled according
           to severity, completeness of evidence, response of the parties, and
@@ -296,10 +367,11 @@ export default function RefundPolicyPage() {
       </section>
 
       <section className="policy-section callout">
-        <h2>13. Customer Summary</h2>
+        <h2>16. Customer Summary</h2>
         <p>
-          Inspect the cylinder before acceptance. Use the 30-minute Return and
-          Full Refund action or the one-hour Return and Replace action when
+          Inspect the cylinder before acceptance. Use the {refundMinutes}-minute
+          Return and Full Refund action or the {replacementMinutes}-minute Return
+          and Replace action when
           available, and submit accurate evidence. Use Report or Dispute after a
           button expires. Report leaks and other safety concerns immediately.
           Refunds and replacements require review and may require cylinder

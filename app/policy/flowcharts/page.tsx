@@ -12,16 +12,48 @@ const flowcharts = [
   {
     title: "Store Service Credit Fee Lifecycle",
     caption:
-      "Shows how a configurable dealer/retailer transaction fee is held, finalized, or reversed.",
+      "Shows how a configurable merchant transaction fee is reserved, finalized, or reversed.",
     chart: `flowchart TD
-  A[Order marked Delivered] --> B[Configurable fee held from SCC]
-  B --> C{Eligible return and full refund before finalization?}
-  C -->|Yes| D[Reverse fee hold to store SCC]
-  C -->|No| E[Order marked Completed]
-  E --> F[Wait through one-hour replacement window]
-  F --> G{Return or replacement opened?}
-  G -->|Yes| H[Preserve hold during review]
-  G -->|No| I[Finalize dealer or retailer transaction fee]`,
+  A[Merchant approves order] --> B[Configurable fee reserved from SCC]
+  B --> C[Order delivery and completion flow]
+  C --> D{Eligible cancellation or full return and refund?}
+  D -->|Yes| E[Reverse reserved fee to merchant SCC]
+  D -->|No| F[Order marked Completed]
+  F --> G[Wait through configured replacement window]
+  G --> H{Open return or replacement review?}
+  H -->|Yes| I[Preserve reservation during review]
+  H -->|No| J[Finalize merchant transaction fee]
+  A --> K{Legacy order reached delivery without reservation?}
+  K -->|Yes| L[Delivery-time backstop reservation]
+  L --> C`,
+  },
+  {
+    title: "Store-Approved Credit Order",
+    caption:
+      "Credit eligibility belongs to the selected merchant; LPG Go records the order but does not become the lender or guarantor.",
+    chart: `flowchart TD
+  A[Merchant grants customer permission] --> B[Credit Order appears for that merchant]
+  B --> C[Customer confirms checkout]
+  C --> D[Order recorded as On Credit and Open]
+  D --> E[Merchant fulfills order]
+  E --> F[Merchant manages separate collection arrangement]
+  F --> G[Merchant updates its records]
+  G --> H[Lawful records retained for support, audit, or claims]`,
+  },
+  {
+    title: "Cylinder Return Without a New Order",
+    caption:
+      "A submitted return remains pending until the original merchant physically receives and approves the cylinder.",
+    chart: `flowchart TD
+  A[Eligible cylinder recorded with customer] --> B[Customer opens return request]
+  B --> C[Original merchant and address are locked]
+  C --> D[Customer submits clear photo and return details]
+  D --> E{Duplicate request already pending?}
+  E -->|Yes| F[Block duplicate]
+  E -->|No| G[Merchant coordinates physical return]
+  G --> H{Cylinder received and approved?}
+  H -->|Yes| I[Update empty and customer-held cylinder records]
+  H -->|No| J[Keep request pending or record reasoned rejection]`,
   },
   {
     title: "Customer Return Actions",
@@ -76,7 +108,7 @@ const flowcharts = [
   A[Approved refund] --> B{Payment method}
   B -->|Supported online payment| C{Funds released?}
   C -->|No| D[Provider reversal or unreleased settlement]
-  C -->|Yes| E[Dealer or retailer settlement, SCC, or future payout deduction]
+  C -->|Yes| E[Merchant settlement, SCC, or future payout deduction]
   B -->|Cash on Delivery| F[Documented cash handback or approved transfer]
   D --> G[Provider processing and confirmation]
   E --> G

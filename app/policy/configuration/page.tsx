@@ -14,7 +14,7 @@ export default function ConfigurationPage() {
     <PolicyLayout
       eyebrow="Developer policy"
       title="Refund Policy Configuration"
-      lead="This machine-readable JSON is the single source of truth for the refund engine and public policy pages."
+      lead="This machine-readable JSON is the public policy reference consumed by the app. Server-side status, fee, and security rules remain authoritative for enforcement and must be kept consistent with it."
     >
       <section className="policy-section">
         <a className="btn" href="/config/refund-policy.json" download>

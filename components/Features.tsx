@@ -16,7 +16,7 @@ const features: Feature[] = [
       </svg>
     ),
     title: "Nearby store discovery",
-    body: "Find participating dealers/retailers around you, with distance and operating status.",
+    body: "Find participating merchants around you, with distance, operating status, and available store details.",
   },
   {
     icon: (
@@ -38,7 +38,7 @@ const features: Feature[] = [
       </svg>
     ),
     title: "Flexible payments",
-    body: "Pay by Cash on Delivery, with supported online payment options shown when available.",
+    body: "Use Cash on Delivery, an enabled online method, or a store-approved Credit Order when shown at checkout.",
   },
   {
     icon: (
@@ -47,8 +47,8 @@ const features: Feature[] = [
         <circle cx="12" cy="12" r="9" />
       </svg>
     ),
-    title: "Reviewed dealers/retailers",
-    body: "Participating stores submit required business and LPG documents for LPG Go onboarding review.",
+    title: "Reviewed merchants",
+    body: "Participating dealers/retailers submit required business, LPG, identity, and brand documents for onboarding review.",
   },
   {
     icon: (
@@ -71,6 +71,34 @@ const features: Feature[] = [
     title: "Vouchers & receipts",
     body: "Redeem discount vouchers at checkout and get a clear digital receipt for every order.",
   },
+  {
+    icon: (
+      <svg className="svg" viewBox="0 0 24 24">
+        <path d="M4 7h16v12H4zM7 7V5h10v2M8 12h8M8 15h5" />
+      </svg>
+    ),
+    orange: true,
+    title: "Credit Orders & VIP pricing",
+    body: "Merchants can grant store-specific Credit Order access and VIP pricing to eligible customers.",
+  },
+  {
+    icon: (
+      <svg className="svg" viewBox="0 0 24 24">
+        <path d="M8 3h8v4H8zM6 7h12v14H6zM9 11h6M9 15h6" />
+      </svg>
+    ),
+    title: "Cylinder custody & returns",
+    body: "Track filled, empty, and customer-held cylinders, including photo-supported returns without a new order.",
+  },
+  {
+    icon: (
+      <svg className="svg" viewBox="0 0 24 24">
+        <path d="M12 3l8 4v5c0 5-3.4 8-8 9-4.6-1-8-4-8-9V7zM8 12h8M12 8l4 4-4 4" />
+      </svg>
+    ),
+    title: "Review & re-dispatch",
+    body: "Failed-delivery evidence can be reviewed before an order is cancelled or returned to Waiting for re-assignment.",
+  },
 ];
 
 const check = (
@@ -87,17 +115,18 @@ const audiences = [
     items: [
       "Guided brand, size, and order type",
       "Live tracking & order timeline",
-      "COD or supported online payment",
+      "COD, enabled online payment, or approved Credit Order",
+      "Cylinder return requests without a new order",
     ],
   },
   {
     cls: "o",
-    title: "Dealers/Retailers",
+    title: "Merchants",
     lead: "Run your store from your phone.",
     items: [
       "Product catalog & walk-in POS",
       "Manage riders & orders",
-      "Store Service Credit (SCC), payouts, and vouchers",
+      "Cylinder inventory, Credit Orders, plans, SCC, and vouchers",
     ],
   },
   {
@@ -108,6 +137,7 @@ const audiences = [
       "Clear pickup & drop-off flow",
       "Background location sharing",
       "Photo-confirmed deliveries",
+      "Failed-delivery review and re-dispatch",
     ],
   },
 ];
@@ -120,7 +150,7 @@ export default function Features() {
           <span className="eyebrow reveal">Features</span>
           <h2 className="title reveal d1">Everything you need in one tap</h2>
           <p className="lead reveal d2">
-            Practical tools for customers, dealers/retailers, and riders,
+            Practical tools for customers, merchants (dealers/retailers), and riders,
             designed to support clear and accountable LPG orders.
           </p>
         </div>

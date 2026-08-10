@@ -2,7 +2,7 @@ const steps = [
   {
     n: "1",
     title: "Pick a store",
-    body: "Browse participating LPG dealers/retailers near you, with distance, operating status, and available store details.",
+    body: "Browse participating LPG merchants near you, with distance, operating status, and available store details.",
   },
   {
     n: "2",
@@ -12,12 +12,12 @@ const steps = [
   {
     n: "3",
     title: "Checkout",
-    body: "Review the full price and pay by Cash on Delivery. Supported online payment options appear when available.",
+    body: "Review the full price and choose Cash on Delivery, an enabled online method, or a merchant-approved Credit Order when shown.",
   },
   {
     n: "4",
     title: "Track & receive",
-    body: "Follow available rider and order updates, inspect the cylinder, and complete the delivery in the app.",
+    body: "Follow available rider and order updates, inspect the cylinder, and keep any delivery, return, or support action inside the app record.",
   },
 ];
 
