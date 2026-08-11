@@ -8,7 +8,7 @@ export default function Footer() {
       <div className="wrap">
         <div className="foot">
           <div>
-            <a className="brand" href="#home">
+            <a className="brand" href="/#home">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img src="/logo.png" alt="LPG Go" />
             </a>
@@ -61,8 +61,8 @@ export default function Footer() {
             <a href="/policy/refund-policy">Refund Policy</a>
             <a href="/consumer-rights">Consumer Rights</a>
             <a href="/about/compliance">Compliance</a>
-            <a href="/#terms">Terms &amp; Conditions</a>
-            <a href="/#privacy">Privacy Policy</a>
+            <a href="/terms">Terms &amp; Conditions</a>
+            <a href="/privacy">Privacy Policy</a>
           </div>
         </div>
         <div className="copy">

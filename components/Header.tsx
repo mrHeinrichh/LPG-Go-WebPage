@@ -29,10 +29,10 @@ export default function Header() {
               {link.label}
             </a>
           ))}
-          <a href="/#privacy" onClick={closeMenu}>
+          <a href="/privacy" onClick={closeMenu}>
             Privacy
           </a>
-          <a href="/#terms" onClick={closeMenu}>
+          <a href="/terms" onClick={closeMenu}>
             Terms
           </a>
         </nav>

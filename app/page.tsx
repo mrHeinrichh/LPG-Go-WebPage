@@ -11,8 +11,6 @@ import Screenshots from "@/components/Screenshots";
 import Download from "@/components/Download";
 import Faq from "@/components/Faq";
 import Support from "@/components/Support";
-import Privacy from "@/components/Privacy";
-import Terms from "@/components/Terms";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import ScrollReveal from "@/components/ScrollReveal";
@@ -34,8 +32,6 @@ export default function Home() {
         <Download />
         <Faq />
         <Support />
-        <Privacy />
-        <Terms />
         <Contact />
       </main>
       <Footer />

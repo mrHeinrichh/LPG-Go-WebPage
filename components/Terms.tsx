@@ -27,7 +27,7 @@ export default function Terms() {
             By creating an account, submitting an application, placing or
             accepting an order, using a rider account, or otherwise using LPG
             Go, you confirm that you have read and agreed to these Terms and the{" "}
-            <a href="#privacy">Privacy Policy</a>. Mandatory rights under
+            <a href="/privacy">Privacy Policy</a>. Mandatory rights under
             Philippine law remain unaffected.
           </p>
 

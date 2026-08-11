@@ -9,7 +9,20 @@ import { useEffect } from "react";
  */
 export default function ScrollReveal() {
   useEffect(() => {
-    const els = Array.from(document.querySelectorAll<HTMLElement>(".reveal"));
+    if (window.location.pathname === "/" && window.location.hash === "#terms") {
+      window.location.replace("/terms");
+      return;
+    }
+    if (window.location.pathname === "/" && window.location.hash === "#privacy") {
+      window.location.replace("/privacy");
+      return;
+    }
+
+    const animatedRevealSelector =
+      ".card.reveal, .step.reveal, .aud.reveal, .safety-reference-card.reveal, .emergency.reveal, .portal-band.reveal, .partner-card.reveal, .shot.reveal, .testimonial.reveal, .coverage-band.reveal, .contact-card.reveal, .dl-card.reveal, .donate.reveal, .support-link.reveal";
+    const els = Array.from(
+      document.querySelectorAll<HTMLElement>(animatedRevealSelector)
+    );
     const parallaxEls = Array.from(
       document.querySelectorAll<HTMLElement>("[data-parallax]")
     );

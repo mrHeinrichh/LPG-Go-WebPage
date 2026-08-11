@@ -37,13 +37,6 @@ body {
   line-height: 1.6;
   overflow-x: hidden;
 }
-main {
-  animation: page-enter 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
-}
-@keyframes page-enter {
-  from { opacity: 0; transform: translateY(12px); }
-  to { opacity: 1; transform: translateY(0); }
-}
 a {
   color: inherit;
   text-decoration: none;
@@ -879,13 +872,8 @@ header.scrolled .menu-toggle {
   object-position: top;
 }
 .kinetic-title {
-  animation: kinetic-title 5.5s ease-in-out infinite;
   transform-origin: left center;
   text-shadow: 0 0 18px rgba(100, 191, 255, 0.16);
-}
-@keyframes kinetic-title {
-  0%, 100% { transform: translate3d(0, 0, 0); text-shadow: 0 0 18px rgba(100, 191, 255, 0.16); }
-  50% { transform: translate3d(0, -3px, 0); text-shadow: 0 0 30px rgba(255, 122, 26, 0.28); }
 }
 .hero-card-back {
   top: 10px;
@@ -929,7 +917,8 @@ header.scrolled .menu-toggle {
   font-size: clamp(34px, 5vw, 56px);
   line-height: 1.08;
   font-weight: 800;
-  letter-spacing: -1px;
+  letter-spacing: 0;
+  text-wrap: balance;
 }
 .hero h1 .hl {
   color: #ffd9bd;
@@ -1069,12 +1058,43 @@ header.scrolled .menu-toggle {
   --tilt-x: 0deg;
   --tilt-y: 0deg;
   --tilt-lift: 0px;
+  opacity: 1;
+  transform: none;
+  transition: none;
+}
+.card.reveal,
+.step.reveal,
+.aud.reveal,
+.safety-reference-card.reveal,
+.emergency.reveal,
+.portal-band.reveal,
+.partner-card.reveal,
+.shot.reveal,
+.testimonial.reveal,
+.coverage-band.reveal,
+.contact-card.reveal,
+.dl-card.reveal,
+.donate.reveal,
+.support-link.reveal {
   opacity: 0;
   transform: translate3d(0, 30px, 0) scale(0.985);
   transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1),
     transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
 }
-.reveal.in {
+.card.reveal.in,
+.step.reveal.in,
+.aud.reveal.in,
+.safety-reference-card.reveal.in,
+.emergency.reveal.in,
+.portal-band.reveal.in,
+.partner-card.reveal.in,
+.shot.reveal.in,
+.testimonial.reveal.in,
+.coverage-band.reveal.in,
+.contact-card.reveal.in,
+.dl-card.reveal.in,
+.donate.reveal.in,
+.support-link.reveal.in {
   opacity: 1;
   transform: none;
 }
@@ -2266,10 +2286,18 @@ footer a:hover {
   }
   .hero-scene {
     display: block;
-    width: min(100%, 620px);
+    width: min(96vw, 620px);
     top: -38px;
     right: auto;
     margin: 8px auto -38px;
+  }
+  .hero h1 {
+    font-size: clamp(36px, 8vw, 48px);
+  }
+  .hero p.sub {
+    max-width: 100%;
+    font-size: 16.5px;
+    line-height: 1.68;
   }
   .phone {
     display: none;
@@ -2356,11 +2384,30 @@ footer a:hover {
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 16px;
   }
+  .hero-stats .s b {
+    font-size: clamp(16px, 2.8vw, 20px);
+    white-space: normal;
+  }
+  .hero-stats .s span {
+    font-size: 12.5px;
+  }
 }
 @media (max-width: 640px) {
+  .hero h1 {
+    font-size: clamp(34px, 11vw, 42px);
+  }
+  .hero p.sub {
+    font-size: 15.8px;
+    margin: 18px 0 24px;
+  }
   .hero-stats {
     grid-template-columns: 1fr;
-    gap: 18px;
+    gap: 12px;
+    margin-top: 28px;
+  }
+  .hero-stats .s b,
+  .hero-stats .s span {
+    max-width: 100%;
   }
   .download-rider-art img {
     object-position: 72% center;
