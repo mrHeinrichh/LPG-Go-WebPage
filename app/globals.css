@@ -775,11 +775,16 @@ header.scrolled .menu-toggle {
   bottom: 2%;
   width: 31%;
   aspect-ratio: 247 / 484;
+  perspective: 1300px;
+  transform-style: preserve-3d;
   transform: translate3d(-50%, calc(var(--parallax-y) + var(--phone-offset-y)), 0);
 }
 .hero-device-logo img {
-  animation-delay: -0.4s;
-  filter: contrast(1.04) saturate(1.03) drop-shadow(0 30px 34px rgba(2, 12, 30, 0.58));
+  animation: hero-logo-camera-spin 9.2s cubic-bezier(0.22, 0.9, 0.2, 1) infinite;
+  backface-visibility: visible;
+  filter: contrast(1.05) saturate(1.05) drop-shadow(0 30px 34px rgba(2, 12, 30, 0.58));
+  transform-origin: center center;
+  transform-style: preserve-3d;
 }
 .hero-device-tracking {
   right: 5%;
@@ -797,6 +802,31 @@ header.scrolled .menu-toggle {
   }
   50% {
     transform: translate3d(0, -10px, 0) scale(1.012);
+  }
+}
+@keyframes hero-logo-camera-spin {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1) rotateY(0deg);
+    filter: contrast(1.05) saturate(1.05) drop-shadow(0 30px 34px rgba(2, 12, 30, 0.58));
+  }
+  16% {
+    transform: translate3d(0, -8px, 0) scale(1) rotateY(0deg);
+    filter: contrast(1.07) saturate(1.06) drop-shadow(0 34px 40px rgba(0, 12, 32, 0.64));
+  }
+  34% {
+    transform: translate3d(0, -8px, 0) scale(1) rotateY(160deg);
+  }
+  52% {
+    transform: translate3d(0, -8px, 0) scale(1) rotateY(360deg);
+    filter: contrast(1.07) saturate(1.06) drop-shadow(0 34px 40px rgba(0, 12, 32, 0.64));
+  }
+  66% {
+    transform: translate3d(0, 0, 0) scale(1) rotateY(360deg);
+    filter: contrast(1.05) saturate(1.05) drop-shadow(0 30px 34px rgba(2, 12, 30, 0.58));
+  }
+  80% {
+    transform: translate3d(0, -10px, 0) scale(1) rotateY(360deg);
   }
 }
 @keyframes philippines-network-pulse {
