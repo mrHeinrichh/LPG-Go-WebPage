@@ -2,9 +2,9 @@ export default function About() {
   return (
     <section id="about">
       <div className="wrap center">
-        <span className="eyebrow reveal">About LPG Go</span>
+        <span className="eyebrow reveal">01 / YOUR LOCAL LPG MARKETPLACE</span>
         <h2 className="title reveal d1">
-          A modern marketplace for everyday cooking gas
+          Your refill starts with a local store.
         </h2>
         <p className="lead reveal d2">
           Buying LPG often means calling several stores, waiting without clear

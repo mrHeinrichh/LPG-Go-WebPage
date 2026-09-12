@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { site } from "@/lib/site";
 import "./globals.css";
+import "./identity.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
@@ -53,7 +54,7 @@ export default function RootLayout({
           crossOrigin=""
         />
         <link
-          href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+          href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap"
           rel="stylesheet"
         />
       </head>

@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { navLinks } from "@/lib/site";
+import { Menu, X } from "lucide-react";
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -22,6 +23,7 @@ export default function Header() {
         <a className="brand" href="/#home" onClick={closeMenu}>
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img src="/logo.png" alt="LPG Go" />
+          <span>LPG<span className="brand-go">GO</span></span>
         </a>
         <nav className={`nav-links${menuOpen ? " show" : ""}`} id="navLinks">
           {navLinks.map((link) => (
@@ -43,15 +45,10 @@ export default function Header() {
           className="menu-toggle"
           aria-label="Menu"
           aria-expanded={menuOpen}
+          aria-controls="navLinks"
           onClick={() => setMenuOpen((v) => !v)}
         >
-          <svg
-            className="svg"
-            viewBox="0 0 24 24"
-            style={{ width: 28, height: 28 }}
-          >
-            <path d="M4 7h16M4 12h16M4 17h16" />
-          </svg>
+          {menuOpen ? <X size={24} aria-hidden="true" /> : <Menu size={24} aria-hidden="true" />}
         </button>
       </div>
     </header>
